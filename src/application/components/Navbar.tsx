@@ -14,7 +14,7 @@ const Navbar = ({links, title, logo}: Props) => {
         `hover:text-cyan-500 px-2 ${pathname.slice(1) === link ? 'text-cyan-400' : ''}`
 
     return (
-        <div className="navbar navbar-glass">
+        <div className="navbar shadow-none">
             <div className="navbar-start">
                 <NavLink className="navbar-item pl-2 flex items-center" to={'/'}>
                     <img className="w-12" src={logo} alt={`${title} logo`}/>

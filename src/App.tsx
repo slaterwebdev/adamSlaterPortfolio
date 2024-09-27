@@ -14,7 +14,7 @@ function App() {
             title="ADAM SLATER"
             logo={logo}
           />
-          <div className="px-6 py-4 grow">
+          <div className="px-4 pb-4 grow">
             <Routes>
               {routes}
             </Routes> 

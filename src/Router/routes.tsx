@@ -8,6 +8,7 @@ export const routeConfig = [
     { path: 'contact', Component: Contact },
 ];
 
-export const routes = routeConfig.map(({path, Component}) => <Route key={`route-${path}`} path={path} element={<Component />}/>)
+export const routes = routeConfig.map(({path, Component}) => 
+    <Route key={`route-${path}`} path={path} element={<Component />}/>)
 
  
