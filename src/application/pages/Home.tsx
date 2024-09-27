@@ -1,9 +1,14 @@
 
 export const Home = () => {
     return ( 
-        <>
-            HOME
-        </>
+        <div className="flex h-full">
+            <div className="w-1/2">
+                TEXT
+            </div>
+            <div className="w-1/2">
+                graphics
+            </div>
+        </div>
      );
 }
  
