@@ -11,3 +11,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.circle {
+  height: 1000px;
+  width: 1000px;
+}
+
+@media (max-width: 1024px) {
+  .circle {
+    height: 800px;
+    width: 800px;
+  }
+}
+
+@media (max-width: 640px) {
+  .circle {
+    height: 700px;
+    width: 700px;
+  }
+}
