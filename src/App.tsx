@@ -4,6 +4,7 @@ import { routeConfig, routes } from "./Router/routes";
 import { Navbar }  from "./application/components/Navbar";
 import logo from "./assets/logo.png";
 import "./index.css"
+import { Footer } from "./application/components/Footer";
 
 function App() {
   return (
@@ -16,12 +17,13 @@ function App() {
             title="ADAM SLATER"
             logo={logo}
           />
-          <div className="px-4 grow z-10 w-screen max-w-screen-xl">
+          <div className="px-4 z-10 w-screen max-w-screen-xl">
             <Routes>
               {routes}
             </Routes> 
           </div>
         </div>
+        <Footer />
       </Suspense>
     </BrowserRouter>
   );
