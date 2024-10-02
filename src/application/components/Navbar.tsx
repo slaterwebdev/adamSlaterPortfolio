@@ -16,7 +16,7 @@ export const Navbar = ({links, title, logo}: NavProps) => {
     })
 
     return (
-        <div className="navbar bg-transparent shadow-none z-10">
+        <div className="navbar bg-transparent shadow-none z-10 max-w-screen-xl">
             <div className="navbar-start">
                 <NavLink className="navbar-item pl-2 flex items-center" to={'/'}>
                     <img className="w-12" src={logo} alt={`${title} logo`}/>
