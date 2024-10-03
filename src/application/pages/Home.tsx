@@ -9,14 +9,20 @@ export const Home = () => {
         phone: '07547620652',
         email: 'adamslater1996@outlook.com'
     }
-    return <div className="h-screen">
+    return <div className="flex flex-col">
         <IntroSection content={introContent} image={profilePic}/>
-        <div className="flex flex-col mb-24">
+        
+        <div className="grow flex flex-col mb-24">
             <h6 className="text-cyan-400 mb-5">About me</h6>
-            <p className="font-playfair text-3xl sm:text-5xl font-semibold">I am an enthusiastic web developer based in New York, with a rich experience of over 6 years in website & product design.</p>
+            <p className="font-playfair text-3xl sm:text-5xl font-semibold">
+                I am an enthusiastic web developer based in New York, with a rich experience of over 6 years in website & product design.
+            </p>
         </div> 
-        <div className="flex flex-col sm:flex-row gap-12">
-            <h6 className="text-cyan-400 text-3xl sm:text-5xl mb-5 flex-1 sm:w-1/2">I build professional & beautiful websites</h6>
+
+        <div className="grow flex flex-col sm:flex-row gap-12">
+            <h6 className="text-cyan-400 text-3xl sm:text-5xl mb-5 flex-1 sm:w-1/2">
+                I build professional & beautiful websites
+            </h6>
             <p className="sm:w-1/2">
                 With years of experience in graphic and web design I have mastered the skills of understanding client requirements according to the latest trends. I have worked with businesses from different niches so you can rely on me for yours.
                 <br/>
