@@ -1,6 +1,6 @@
 import { FaPhone, FaMailBulk } from "react-icons/fa";
 type IntroPageProps = {
-    content?: {
+    content: {
         title: string,
         subTitle?: string,
         tagLine?: string,
