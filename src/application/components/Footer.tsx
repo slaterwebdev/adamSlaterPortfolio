@@ -9,7 +9,7 @@ type FooterProps = {
 export const Footer = ({links}: FooterProps) => {
     const { pathname } = useLocation()
     return (
-    <footer className="bg-gray-800 text-white py-6 mt-24 w-screen">
+    <footer className="bg-gray-800 text-white py-6 w-screen">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div className="mb-4 sm:mb-0">
                 <p className="text-sm">&copy; 2024 Adam Slater. All rights reserved.</p>
