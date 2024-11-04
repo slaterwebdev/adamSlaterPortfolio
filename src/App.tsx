@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <div className="relative h-screen flex items-center bg-white flex-col overflow-x-hidden">
-          <div className="circle -right-64 -top-64 absolute rounded-full bg-gradient-to-r from-cyan-400 to-gray-50 opacity-50"></div>
+          <div className="circleBackdrop -right-64 -top-64 absolute rounded-full bg-gradient-to-r from-cyan-400 to-gray-50 opacity-50"></div>
 
           <Navbar links={getFormattedLinks} title="ADAM SLATER" logo={logo} />
 

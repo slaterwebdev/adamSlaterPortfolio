@@ -1,3 +1,4 @@
+import { currentYear } from "@/constants/constants";
 import { ReactNode } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
@@ -8,7 +9,6 @@ type FooterProps = {
 
 export const Footer = ({ links }: FooterProps) => {
   const { pathname } = useLocation();
-  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-gray-800 text-white py-6 w-screen">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">

@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
-type NavProps = {
+type NavbarProps = {
   links: (pathname: string) => Array<ReactNode>;
   title: string;
   logo: string;
 };
 
-export const Navbar = ({ links, title, logo }: NavProps) => {
+export const Navbar = ({ links, title, logo }: NavbarProps) => {
   const { pathname } = useLocation();
   return (
     <div className="navbar bg-transparent shadow-none z-10 max-w-screen-xl">

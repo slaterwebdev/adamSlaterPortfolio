@@ -2,12 +2,7 @@ import { IntroSection } from "@/application/components/IntroSection";
 import skillsHero from "@/assets/headerImages/skillsHero.jpg";
 import { ContentSection } from "@/application/components/ContentSection";
 import { Accordion } from "@/application/components/Accordion";
-
-const skills = [
-  { title: "Languages", icons: ["javascript", "html", "css"] },
-  { title: "Frameworks & Libraries", icons: ["react", "nodeJs", "vueJs"] },
-  { title: "Tools", icons: ["sass", "git", "github"] },
-];
+import { skillsMapper } from "@/constants/constants";
 
 export const Skills = () => (
   <>
@@ -20,7 +15,7 @@ export const Skills = () => (
           these lines.
         </p>
       </ContentSection>
-      <Accordion skills={skills} />
+      <Accordion skills={skillsMapper} />
     </div>
   </>
 );

@@ -1,41 +1,12 @@
-import { FaLaptop, FaMobile, FaPen } from "react-icons/fa";
 import profilePic from "@/assets/headerImages/profilePic.png";
 import { IntroSection } from "@/application/components/IntroSection";
 import { Grid } from "@/application/components/Grid";
 import { ContentSection } from "@/application/components/ContentSection";
-
-const introContent = {
-  tagLine: "HELLO, MY NAME IS",
-  title: "Adam Slater",
-  subTitle: "Full-Stack dev",
-  phone: "07547620652",
-  email: "adamslater1996@outlook.com",
-};
-
-const gridItems = [
-  {
-    icon: <FaLaptop size={24} />,
-    content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
-    ariaLabel: "Laptop Icon",
-  },
-  {
-    icon: <FaMobile size={24} />,
-    content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
-    ariaLabel: "Mobile Icon",
-  },
-  {
-    icon: <FaPen size={24} />,
-    content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
-    ariaLabel: "Pen Icon",
-  },
-];
+import { homeContent, serviceOptions } from "@/constants/constants";
 
 export const Home = () => (
   <div className="flex flex-col">
-    <IntroSection content={introContent} image={profilePic} />
+    <IntroSection content={homeContent} image={profilePic} />
 
     <ContentSection title="About me" titleSize="text-3xl">
       <p className="font-playfair text-3xl sm:text-5xl font-semibold">
@@ -68,7 +39,7 @@ export const Home = () => (
 
     <ContentSection title="What I do">
       <Grid
-        items={gridItems}
+        items={serviceOptions}
         columns="1fr 1fr 1fr"
         gap="2rem"
         className="sm:flex-row items-center"

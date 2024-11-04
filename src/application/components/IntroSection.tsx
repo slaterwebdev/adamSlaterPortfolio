@@ -1,5 +1,5 @@
 import { FaPhone, FaMailBulk } from "react-icons/fa";
-type IntroPageProps = {
+type IntroSectionProps = {
   content: {
     title: string;
     subTitle?: string;
@@ -10,7 +10,7 @@ type IntroPageProps = {
   image?: string;
 };
 
-export const IntroSection = ({ content, image }: IntroPageProps) => (
+export const IntroSection = ({ content, image }: IntroSectionProps) => (
   <section
     className={`flex sm:justify-between ${content ? "justify-around" : "justify-end mr-28"} h-screen flex-col-reverse sm:flex-row lg:gap-24 mb-12`}
   >

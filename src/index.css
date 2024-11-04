@@ -10,23 +10,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid; */
 }
 
-.circle {
+.circleBackdrop {
   height: 1000px;
   width: 1000px;
 }
 
 @media (max-width: 1024px) {
-  .circle {
+  .circleBackdrop {
     height: 800px;
     width: 800px;
   }
 }
 
 @media (max-width: 640px) {
-  .circle {
+  .circleBackdrop {
     height: 700px;
     width: 700px;
   }

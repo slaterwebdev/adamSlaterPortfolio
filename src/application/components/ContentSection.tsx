@@ -21,6 +21,6 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
         {title}
       </h6>
     )}
-    <div className={`${font && font} flex-1`}>{children}</div>
+    <div className={`${font && font} flex-1 text-black`}>{children}</div>
   </div>
 );

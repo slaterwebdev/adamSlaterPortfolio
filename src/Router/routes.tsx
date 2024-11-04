@@ -18,7 +18,7 @@ export const getFormattedLinks = (pathname: string) =>
     .map((link) => {
       const formattedLink =
         link === "" ? "Home" : link.charAt(0).toUpperCase() + link.slice(1);
-      const linkStatus = `hover:text-cyan-500 px-2 ${pathname.slice(1) === link ? "text-cyan-400" : ""}`;
+      const linkStatus = `hover:text-cyan-500 px-2 ${pathname.slice(1) === link ? "text-cyan-400" : "text-white"}`;
       return (
         <NavLink key={`link-${link}`} className={linkStatus} to={`/${link}`}>
           {formattedLink}
