@@ -1,7 +1,7 @@
-import { IntroSection } from "../components/IntroSection";
-import skillsHero from "../../assets/pageIntros/skillsHero.jpg";
-import { ContentSection } from "../components/ContentSection";
-import { Accordion } from "../components/Accordion";
+import { IntroSection } from "@/application/components/IntroSection";
+import skillsHero from "@/assets/headerImages/skillsHero.jpg";
+import { ContentSection } from "@/application/components/ContentSection";
+import { Accordion } from "@/application/components/Accordion";
 
 const skills = [
   { title: "Languages", icons: ["javascript", "html", "css"] },

@@ -1,5 +1,5 @@
 import { FaChevronLeft } from "react-icons/fa";
-import { iconMapper } from "@assets/iconMapping";
+import { iconMapper } from "@/utilities/iconMapping";
 
 type SkillsProps = {
   skills: Array<{

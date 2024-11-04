@@ -1,6 +1,6 @@
-import contactHero from "../../assets/pageIntros/contactHero.jpg";
-import { ContentSection } from "../components/ContentSection";
-import { IntroSection } from "../components/IntroSection";
+import contactHero from "@/assets/headerImages/contactHero.jpg";
+import { ContentSection } from "@/application/components/ContentSection";
+import { IntroSection } from "@/application/components/IntroSection";
 
 export const Contact = () => (
   <>

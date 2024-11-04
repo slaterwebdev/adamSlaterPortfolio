@@ -1,5 +1,5 @@
-import { IntroSection } from "../components/IntroSection";
-import portfolioHero from "../../assets/pageIntros/portfolioHero.jpg";
+import { IntroSection } from "@/application/components/IntroSection";
+import portfolioHero from "@/assets/headerImages/portfolioHero.jpg";
 export const Portfolio = () => {
   const introContent = {
     title: "Portfolio",

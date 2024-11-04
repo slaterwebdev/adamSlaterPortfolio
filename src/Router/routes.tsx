@@ -1,5 +1,5 @@
 import { NavLink, Route } from "react-router-dom";
-import { Contact, Home, Portfolio, Skills } from "../application/pages";
+import { Contact, Home, Portfolio, Skills } from "@/application/pages";
 
 const routeConfig = [
   { path: "", Component: Home },

@@ -1,8 +1,8 @@
 import { FaLaptop, FaMobile, FaPen } from "react-icons/fa";
-import profilePic from "../../assets/pageIntros/profilePic.png";
-import { IntroSection } from "../components/IntroSection";
-import { Grid } from "../components/Grid";
-import { ContentSection } from "../components/ContentSection";
+import profilePic from "@/assets/headerImages/profilePic.png";
+import { IntroSection } from "@/application/components/IntroSection";
+import { Grid } from "@/application/components/Grid";
+import { ContentSection } from "@/application/components/ContentSection";
 
 const introContent = {
   tagLine: "HELLO, MY NAME IS",

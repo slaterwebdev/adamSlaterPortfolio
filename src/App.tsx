@@ -1,10 +1,10 @@
 import { Suspense } from "react";
 import { BrowserRouter, Routes } from "react-router-dom";
 import { routes, getFormattedLinks } from "./Router/routes";
-import { Navbar } from "./application/components/Navbar";
-import logo from "./assets/logo.png";
+import { Navbar } from "@/application/components/Navbar";
+import logo from "@/assets/logo.png";
 import "./index.css";
-import { Footer } from "./application/components/Footer";
+import { Footer } from "@/application/components/Footer";
 
 function App() {
   return (
