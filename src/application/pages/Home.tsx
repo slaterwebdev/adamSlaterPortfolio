@@ -1,12 +1,12 @@
 import profilePic from "@/assets/headerImages/profilePic.png";
-import { IntroSection } from "@/application/components/IntroSection";
+import { PageIntroduction } from "@/application/components/PageIntroduction";
 import { Grid } from "@/application/components/Grid";
 import { ContentSection } from "@/application/components/ContentSection";
 import { homeContent, serviceOptions } from "@/constants/constants";
 
 export const Home = () => (
   <div className="flex flex-col">
-    <IntroSection content={homeContent} image={profilePic} />
+    <PageIntroduction content={homeContent} image={profilePic} />
 
     <ContentSection title="About me" titleSize="text-3xl">
       <p className="font-playfair text-3xl sm:text-5xl font-semibold">

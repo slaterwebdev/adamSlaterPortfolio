@@ -1,10 +1,10 @@
 import contactHero from "@/assets/headerImages/contactHero.jpg";
 import { ContentSection } from "@/application/components/ContentSection";
-import { IntroSection } from "@/application/components/IntroSection";
+import { PageIntroduction } from "@/application/components/PageIntroduction";
 
 export const Contact = () => (
   <>
-    <IntroSection content={{ title: "Get In Touch" }} image={contactHero} />
+    <PageIntroduction content={{ title: "Get In Touch" }} image={contactHero} />
     <ContentSection title="Send me a message">
       <p className="text-3xl sm:text-5xl">
         Whether you wish to discuss new ideas or have a project for me, simply

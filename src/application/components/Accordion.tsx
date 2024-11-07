@@ -18,7 +18,10 @@ export const Accordion = ({ skills }: SkillsProps) => (
             id={`accordion-${i}`}
             className="accordion-toggle"
           />
-          <label htmlFor={`accordion-${i}`} className="accordion-title">
+          <label
+            htmlFor={`accordion-${i}`}
+            className="accordion-title bg-gray-800"
+          >
             {skill.title}
           </label>
           <i className="accordion-icon">

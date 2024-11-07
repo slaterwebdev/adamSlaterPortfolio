@@ -10,7 +10,9 @@ type IntroSectionProps = {
   image?: string;
 };
 
-export const IntroSection = ({ content, image }: IntroSectionProps) => (
+// TO DO configure container divs to load in to DOM or not based on if the data exists to fix spacing issues on other pages where subtitle, phone and email do not exist
+
+export const PageIntroduction = ({ content, image }: IntroSectionProps) => (
   <section
     className={`flex sm:justify-between ${content ? "justify-around" : "justify-end mr-28"} h-screen flex-col-reverse sm:flex-row lg:gap-24 mb-12`}
   >

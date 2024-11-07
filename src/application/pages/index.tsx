@@ -1,4 +1,4 @@
 export { Home } from "./Home";
 export { Portfolio } from "./Portfolio";
-export { Skills } from "./Skills";
+export { About } from "./About";
 export { Contact } from "./Contact";
