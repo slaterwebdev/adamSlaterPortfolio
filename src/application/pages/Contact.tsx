@@ -1,16 +1,16 @@
-import contactHero from "@/assets/headerImages/contactHero.jpg";
-import { ContentSection } from "@/application/components/ContentSection";
+import { ContentContainer } from "@/application/components/ContentContainer";
 import { PageIntroduction } from "@/application/components/PageIntroduction";
+import contactHero from "@/assets/headerImages/contactHero.jpg";
 
 export const Contact = () => (
   <>
     <PageIntroduction content={{ title: "Get In Touch" }} image={contactHero} />
-    <ContentSection title="Send me a message">
+    <ContentContainer title="Send me a message">
       <p className="text-3xl sm:text-5xl">
         Whether you wish to discuss new ideas or have a project for me, simply
         fill this form and I'll get back to you soon.
       </p>
-    </ContentSection>
+    </ContentContainer>
     <div className="p-8 rounded-xl shadow-lg max-w-screen-lg mx-auto mb-12 sm:mb-24">
       <form className="space-y-4">
         <div className="w-full">

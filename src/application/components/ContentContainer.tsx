@@ -7,7 +7,7 @@ type ContentSectionProps = {
   extraContent?: JSX.Element;
 };
 
-export const ContentSection: React.FC<ContentSectionProps> = ({
+export const ContentContainer: React.FC<ContentSectionProps> = ({
   title,
   titleSize = 'text-3xl',
   children,
