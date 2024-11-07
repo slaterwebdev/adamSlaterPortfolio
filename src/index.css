@@ -33,13 +33,9 @@
 
 
 .parallax-section {
-  /* background-image: url('@/assets/parallax-test.jpg'); */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px; /* Set a fixed height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 400px;
 }

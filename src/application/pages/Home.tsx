@@ -4,7 +4,7 @@ import { Grid } from "@/application/components/Grid";
 import { ContentSection } from "@/application/components/ContentSection";
 import { homeContent, serviceOptions } from "@/constants/constants";
 import parallaxImage from "@/assets/parallax-test.jpg";
-import { ParallaxImage } from "../components/ParallaxImage";
+import { ParallaxImage } from "@/application/components/ParallaxImage";
 
 export const Home = () => (
   <div className="flex flex-col">
