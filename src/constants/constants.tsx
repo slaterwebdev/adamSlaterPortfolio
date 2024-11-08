@@ -1,5 +1,6 @@
 import { FaLaptop, FaMobile, FaPen } from "react-icons/fa";
 
+// HOME PAGE
 export const homeContent = {
   tagLine: "HELLO, MY NAME IS",
   title: "Adam Slater",
@@ -8,8 +9,14 @@ export const homeContent = {
   email: "adamslater1996@outlook.com",
 };
 
-export const currentYear = new Date().getFullYear();
+// ABOUT PAGE
+export const skillsMapper = [
+  { title: "Languages", icons: ["javascript", "html", "css"] },
+  { title: "Frameworks & Libraries", icons: ["react", "nodeJs", "vueJs"] },
+  { title: "Tools", icons: ["sass", "git", "github"] },
+];
 
+// PORTFOLIO PAGE
 export const serviceOptions = [
   {
     icon: <FaLaptop size={24} />,
@@ -31,8 +38,5 @@ export const serviceOptions = [
   },
 ];
 
-export const skillsMapper = [
-  { title: "Languages", icons: ["javascript", "html", "css"] },
-  { title: "Frameworks & Libraries", icons: ["react", "nodeJs", "vueJs"] },
-  { title: "Tools", icons: ["sass", "git", "github"] },
-];
+// GENERAL
+export const currentYear = new Date().getFullYear();
