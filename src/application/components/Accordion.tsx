@@ -30,7 +30,7 @@ export const Accordion = ({ skills }: SkillsProps) => (
           <div className="accordion-content">
             <div className="min-h-0 flex items-center justify-center gap-5">
               {skill.icons.map((iconKey, i) => (
-                <span key={i} className="text-3xl">
+                <span key={i} className="text-3xl float">
                   {iconMapper[iconKey]}
                 </span>
               ))}

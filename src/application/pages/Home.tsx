@@ -36,6 +36,7 @@ export const Home = () => (
         work on together.
       </p>
     </ContentContainer>
+    <ParallaxImage imageUrl={parallaxImageUrl} />
     <ContentContainer title="What I do">
       <Grid
         items={serviceOptions}
@@ -44,6 +45,12 @@ export const Home = () => (
         className="sm:flex-row items-center"
       />
     </ContentContainer>
-    <ParallaxImage imageUrl={parallaxImageUrl} />
+    <ContentContainer
+      titleSize="text-3xl sm:text-5xl"
+      title="Check out some of my previous work"
+      row
+    >
+      {/* TO DO place in three placeholder cards that will be images from projects worked on, have them stacked like messy playing cards  */}
+    </ContentContainer>
   </div>
 );

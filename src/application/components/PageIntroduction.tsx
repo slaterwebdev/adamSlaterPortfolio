@@ -1,5 +1,6 @@
 import { FaPhone, FaMailBulk } from "react-icons/fa";
-type IntroSectionProps = {
+
+type PageIntroductionProps = {
   content: {
     title: string;
     subTitle?: string;
@@ -12,9 +13,9 @@ type IntroSectionProps = {
 
 // TO DO configure container divs to load in to DOM or not based on if the data exists to fix spacing issues on other pages where subtitle, phone and email do not exist
 
-export const PageIntroduction = ({ content, image }: IntroSectionProps) => (
+export const PageIntroduction = ({ content, image }: PageIntroductionProps) => (
   <section
-    className={`flex sm:justify-between ${content ? "justify-around" : "justify-end mr-28"} h-screen flex-col-reverse sm:flex-row lg:gap-24 mb-12`}
+    className={`flex sm:justify-between mt-20 ${content ? "justify-around" : "justify-end mr-28"} h-screen flex-col-reverse sm:flex-row lg:gap-24 mb-12 max-h-[800px]`}
   >
     <div className="flex items-center">
       <div className="text-slate-500 font-playfair flex flex-col gap-5">
@@ -39,7 +40,7 @@ export const PageIntroduction = ({ content, image }: IntroSectionProps) => (
           {content?.email && (
             <a
               href={`mailto:${content?.email}`}
-              className="block flex gap-5 items-center mb-2"
+              className="block flex gap-5 items-center mb-2 hover:scale-105"
             >
               <FaMailBulk className="text-cyan-400" />
               {content.email}
@@ -48,7 +49,7 @@ export const PageIntroduction = ({ content, image }: IntroSectionProps) => (
           {content?.phone && (
             <a
               href={`tel:+${content?.phone}`}
-              className="flex gap-5 items-center"
+              className="flex gap-5 items-center hover:scale-105"
             >
               <FaPhone className="text-cyan-400" />
               {content.phone}

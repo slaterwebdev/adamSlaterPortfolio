@@ -10,7 +10,7 @@ type FooterProps = {
 export const Footer = ({ links }: FooterProps) => {
   const { pathname } = useLocation();
   return (
-    <footer className="bg-gray-800 text-white py-6 w-screen mt-10">
+    <footer className="bg-gray-800 text-white py-6 w-screen">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
         <div className="mb-4 sm:mb-0">
           <p className="text-sm">

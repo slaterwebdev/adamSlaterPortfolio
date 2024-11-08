@@ -4,7 +4,7 @@ type ParallaxImageProps = {
 
 export const ParallaxImage = ({imageUrl}: ParallaxImageProps) => (
   <div
-    className="parallax-section -mx-20"
+    className="parallax-section -mx-12 xl:-mx-96 mb-12"
     style={{ backgroundImage: `url(${imageUrl})` }}
   ></div>
 );
