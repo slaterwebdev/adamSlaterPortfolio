@@ -8,65 +8,68 @@ type PageIntroductionProps = {
     phone?: string;
     email?: string;
   };
-  image?: string;
+  image: string;
 };
 
-// TO DO configure container divs to load in to DOM or not based on if the data exists to fix spacing issues on other pages where subtitle, phone and email do not exist
+export const PageIntroduction = ({ content, image }: PageIntroductionProps) => {
+  const { title, subTitle, tagLine, phone, email } = content;
+  return (
+    <section
+      className={`flex mt-20 justify-around flex-col-reverse mb-12 max-h-[800px] sm:justify-between sm:flex-rowsm:h-screen lg:gap-24`}
+    >
+      <div className="flex items-center">
+        <div className="text-slate-500 font-playfair flex flex-col gap-5">
+          <header className="lg:mb-8">
+            <h3 className="font-sans text-md mb-4 lg:text-lg">
+              {tagLine && tagLine}
+            </h3>
+            {(tagLine || title) && (
+              <div className="h-1 bg-slate-400 w-20"></div>
+            )}
+          </header>
 
-export const PageIntroduction = ({ content, image }: PageIntroductionProps) => (
-  <section
-    className={`flex sm:justify-between mt-20 ${content ? "justify-around" : "justify-end mr-28"} h-screen flex-col-reverse sm:flex-row lg:gap-24 mb-12 max-h-[800px]`}
-  >
-    <div className="flex items-center">
-      <div className="text-slate-500 font-playfair flex flex-col gap-5">
-        <header className="lg:mb-8">
-          <h3 className="font-sans text-md lg:text-lg mb-4">
-            {content?.tagLine}
-          </h3>
-          {(content?.tagLine || content?.title) && (
-            <div className="h-1 bg-slate-400 w-20"></div>
+          <h1 className="text-5xl font-bold text-black leading-tight lg:text-8xl">
+            {title}
+          </h1>
+
+          {subTitle && (
+            <h2 className="text-3xl font-semibold mb-10 lg:text-4xl">
+              {subTitle}
+            </h2>
           )}
-        </header>
 
-        <h1 className="text-5xl lg:text-8xl font-bold text-black leading-tight">
-          {content?.title}
-        </h1>
-
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-10">
-          {content?.subTitle}
-        </h2>
-
-        <div className="text-black font-sans">
-          {content?.email && (
-            <a
-              href={`mailto:${content?.email}`}
-              className="block flex gap-5 items-center mb-2 hover:scale-105"
-            >
-              <FaMailBulk className="text-cyan-400" />
-              {content.email}
-            </a>
-          )}
-          {content?.phone && (
-            <a
-              href={`tel:+${content?.phone}`}
-              className="flex gap-5 items-center hover:scale-105"
-            >
-              <FaPhone className="text-cyan-400" />
-              {content.phone}
-            </a>
-          )}
+          <div className="text-black font-sans">
+            {email && (
+              <a
+                href={`mailto:${email}`}
+                className="block flex gap-5 items-center mb-2 hover:scale-105"
+              >
+                <FaMailBulk className="text-cyan-400" />
+                {email}
+              </a>
+            )}
+            {phone && (
+              <a
+                href={`tel:+${phone}`}
+                className="flex gap-5 items-center hover:scale-105"
+              >
+                <FaPhone className="text-cyan-400" />
+                {phone}
+              </a>
+            )}
+          </div>
         </div>
       </div>
-    </div>
 
-    <div className="flex items-center justify-center">
-      <div className="rounded-full bg-white h-80 w-80 sm:h-96 sm:w-96 flex items-center overflow-hidden">
-        <img
-          src={image}
-          alt={content?.title && `${content?.title} picture`}
-          className="object-cover w-full max-w-md"
-        />
+      <div className="flex items-center justify-center">
+        <div className="rounded-full bg-white h-80 w-80 flex items-center overflow-hidden sm:h-96 sm:w-96">
+          <img
+            src={image}
+            alt={title && `${title} picture`}
+            className="object-cover w-full max-w-md"
+          />
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};

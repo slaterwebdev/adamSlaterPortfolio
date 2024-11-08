@@ -10,7 +10,7 @@ export const Home = () => (
   <div className="flex flex-col">
     <PageIntroduction content={homeContent} image={profilePic} />
     <ContentContainer title="About me" titleSize="text-3xl">
-      <p className="font-playfair text-3xl sm:text-5xl font-semibold">
+      <p className="font-playfair text-3xl font-semibold sm:text-5xl">
         I am an enthusiastic web developer based in New York, with a rich
         experience of over 6 years in website & product design.
       </p>
@@ -42,7 +42,7 @@ export const Home = () => (
         items={serviceOptions}
         columns="1fr 1fr 1fr"
         gap="2rem"
-        className="sm:flex-row items-center"
+        className="items-center sm:flex-row"
       />
     </ContentContainer>
     <ContentContainer
@@ -50,7 +50,7 @@ export const Home = () => (
       title="Check out some of my previous work"
       row
     >
-      {/* TO DO place in three placeholder cards that will be images from projects worked on, have them stacked like messy playing cards  */}
+      {/* TO DO place in three placeholder cards that will be images from projects worked on, have them stacked like messy playing cards that when you hover they increase slightly in scale */}
     </ContentContainer>
   </div>
 );

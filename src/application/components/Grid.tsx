@@ -16,13 +16,13 @@ export const Grid = ({
   className = "",
 }: GridProps) => (
   <div
-    className={`sm:grid ${className}`}
+    className={`${className} sm:grid`}
     style={{ gridTemplateColumns: columns, gap }}
   >
     {items.map(({ icon, content, ariaLabel }, index) => (
       <div
         key={index}
-        className="flex flex-row sm:flex-col justify-between gap-5 mb-5 sm:mb-0 px-5 items-center"
+        className="flex flex-row justify-between gap-5 mb-5 px-5 items-center sm:mb-0 sm:flex-col"
       >
         <i aria-label={ariaLabel} className="hover:text-cyan-400">
           {icon}

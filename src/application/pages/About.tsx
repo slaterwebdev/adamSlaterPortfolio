@@ -20,7 +20,7 @@ export const About = () => (
       </p>
     </ContentContainer>
     <ContentContainer title="About me" titleSize="text-3xl">
-      <p className="font-playfair text-3xl sm:text-5xl font-semibold">
+      <p className="font-playfair text-3xl font-semibold sm:text-5xl">
         I am an enthusiastic web developer based in New York, with a rich
         experience of over 6 years in website & product design.
       </p>
