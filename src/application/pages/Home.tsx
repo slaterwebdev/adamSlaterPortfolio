@@ -6,6 +6,7 @@ import { ParallaxImage } from "@/application/components/ParallaxImage";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/headerImages/profilePic.png";
 import { StackedCards } from "@/application/components/StackedCards";
+import { darwin, arnoldClark, goGirl, VP } from "@/assets/porfolioImages/index"
 
 export const Home = () => (
   <div className="flex flex-col">
@@ -49,7 +50,9 @@ export const Home = () => (
     <ContentContainer
       titleSize="text-3xl sm:text-5xl"
       title="Check out some of my previous work"
-      extraContent={<StackedCards />}
+      extraContent={
+        <StackedCards cardImageURLs={[VP, arnoldClark, goGirl, darwin]} />
+      }
     >
       <h6>VIEW ALL</h6>
     </ContentContainer>

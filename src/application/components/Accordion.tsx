@@ -9,7 +9,7 @@ type SkillsProps = {
 };
 
 export const Accordion = ({ skills }: SkillsProps) => (
-  <div className="accordion-group accordion-group-hover mb-12 rounded-xl w-100 sm:w-3/4">
+  <div className="accordion-group accordion-group-hover mb-12 rounded-xl w-full sm:w-3/4">
     {skills.map((skill, i) => {
       return (
         <div className="accordion shadow" key={i}>

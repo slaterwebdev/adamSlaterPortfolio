@@ -1,5 +1,5 @@
 type ContentContainerProps = {
-  title?: string;
+  title: string;
   titleSize?: string;
   children?: React.ReactNode;
   font?: string;
@@ -15,8 +15,10 @@ export const ContentContainer = ({
   row = false,
   extraContent,
 }: ContentContainerProps) => (
-  <div className="flex flex-col sm:flex-row gap-10 sm:flex-row">
-    <div className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24`}>
+  <div className="flex flex-col sm:flex-row gap-5 sm:flex-row">
+    <div
+      className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24`}
+    >
       {title && (
         <h6 className={`text-cyan-400 mb-5 ${row && "sm:w-1/2"} ${titleSize}`}>
           {title}
