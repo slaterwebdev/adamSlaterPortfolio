@@ -31,16 +31,6 @@
   }
 }
 
-
-.parallax-section {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
-  width: 120vw;
-}
-
 .float {
   animation: float 3s ease-in-out infinite;
 }

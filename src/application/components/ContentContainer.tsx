@@ -15,15 +15,15 @@ export const ContentContainer = ({
   row = false,
   extraContent,
 }: ContentContainerProps) => (
-  <div className="flex flex-col sm:flex-row gap-10">
-    <div className={`flex flex-col ${row && "sm:flex-row"} mb-12 sm:mb-24`}>
+  <div className="flex flex-col sm:flex-row gap-10 sm:flex-row">
+    <div className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24`}>
       {title && (
         <h6 className={`text-cyan-400 mb-5 ${row && "sm:w-1/2"} ${titleSize}`}>
           {title}
         </h6>
       )}
       {children && (
-        <div className={`${font} flex-1 text-black`}>{children}</div>
+        <div className={`flex-1 text-black ${font}`}>{children}</div>
       )}
     </div>
     {extraContent && extraContent}

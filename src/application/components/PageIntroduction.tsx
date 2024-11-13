@@ -15,7 +15,7 @@ export const PageIntroduction = ({ content, image }: PageIntroductionProps) => {
   const { title, subTitle, tagLine, phone, email } = content;
   return (
     <section
-      className={`flex mt-20 justify-around flex-col-reverse mb-12 max-h-[800px] sm:justify-between sm:flex-rowsm:h-screen lg:gap-24`}
+    className={`flex mt-20 sm:mt-0 justify-around flex-col-reverse mb-12 max-h-[800px] justify-between sm:flex-row sm:h-screen lg:gap-24`}
     >
       <div className="flex items-center">
         <div className="text-slate-500 font-playfair flex flex-col gap-5">
@@ -62,7 +62,7 @@ export const PageIntroduction = ({ content, image }: PageIntroductionProps) => {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="rounded-full bg-white h-80 w-80 flex items-center overflow-hidden sm:h-96 sm:w-96">
+        <div className="rounded-full bg-white h-80 w-80 flex items-center overflow-hidden transition-transform duration-500 ease-in-out hover:scale-105">
           <img
             src={image}
             alt={title && `${title} picture`}

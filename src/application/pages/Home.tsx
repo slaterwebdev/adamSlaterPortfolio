@@ -5,6 +5,7 @@ import { homeContent, serviceOptions } from "@/constants/constants";
 import { ParallaxImage } from "@/application/components/ParallaxImage";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/headerImages/profilePic.png";
+import { StackedCards } from "@/application/components/StackedCards";
 
 export const Home = () => (
   <div className="flex flex-col">
@@ -48,9 +49,9 @@ export const Home = () => (
     <ContentContainer
       titleSize="text-3xl sm:text-5xl"
       title="Check out some of my previous work"
-      row
+      extraContent={<StackedCards />}
     >
-      {/* TO DO place in three placeholder cards that will be images from projects worked on, have them stacked like messy playing cards that when you hover they increase slightly in scale */}
+      <h6>VIEW ALL</h6>
     </ContentContainer>
   </div>
 );
