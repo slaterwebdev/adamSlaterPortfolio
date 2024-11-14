@@ -22,7 +22,7 @@ export const Grid = ({
     {items.map(({ icon, content, ariaLabel }, index) => (
       <div
         key={index}
-        className="flex flex-row justify-between gap-5 mb-5 px-5 items-center sm:mb-0 sm:flex-col"
+        className={`flex justify-between gap-5 mb-5 items-center sm:mb-0 sm:flex-col`}
       >
         <i aria-label={ariaLabel} className="hover:text-cyan-400">
           {icon}

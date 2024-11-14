@@ -9,6 +9,20 @@ import skillsHero from "@/assets/headerImages/skillsHero.jpg";
 export const About = () => (
   <>
     <PageIntroduction content={{ title: "About" }} image={skillsHero} />
+    <ContentContainer title="About me" titleSize="text-3xl">
+      <p className="font-playfair text-3xl font-semibold sm:text-5xl">
+        I am an enthusiastic web developer based in New York, with a rich
+        experience of over 6 years in website & product design.
+      </p>
+    </ContentContainer>
+    <ContentContainer title="Experience" titleSize="text-3xl sm:text-5xl">
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus officiis quos laudantium soluta.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus officiis quos laudantium soluta.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus officiis quos laudantium soluta.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus officiis quos laudantium soluta.</li>
+      </ul>
+    </ContentContainer>
     <ContentContainer
       title="What I can offer"
       extraContent={<Accordion skills={skillsMapper} />}
@@ -17,12 +31,6 @@ export const About = () => (
         From understanding your requirements, designing a blueprint and
         delivering the final product, I do everything that falls in between
         these lines.
-      </p>
-    </ContentContainer>
-    <ContentContainer title="About me" titleSize="text-3xl">
-      <p className="font-playfair text-3xl font-semibold sm:text-5xl">
-        I am an enthusiastic web developer based in New York, with a rich
-        experience of over 6 years in website & product design.
       </p>
     </ContentContainer>
     <ParallaxImage imageUrl={parallaxImageUrl} />

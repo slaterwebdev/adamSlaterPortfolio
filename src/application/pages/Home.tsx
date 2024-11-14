@@ -7,6 +7,7 @@ import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/headerImages/profilePic.png";
 import { StackedCards } from "@/application/components/StackedCards";
 import { darwin, arnoldClark, goGirl, VP } from "@/assets/porfolioImages/index"
+import { NavLink } from "react-router-dom";
 
 export const Home = () => (
   <div className="flex flex-col">
@@ -54,7 +55,15 @@ export const Home = () => (
         <StackedCards cardImageURLs={[VP, arnoldClark, goGirl, darwin]} />
       }
     >
-      <h6>VIEW ALL</h6>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat voluptates amet doloribus quod, similique autem dicta!
+      <div className="flex justify-center sm:justify-end mt-8">
+        <NavLink
+          className="hover:hover:text-cyan-500 underline"
+          to={"/portfolio"}
+        >
+          VIEW ALL
+        </NavLink>
+      </div>
     </ContentContainer>
   </div>
 );

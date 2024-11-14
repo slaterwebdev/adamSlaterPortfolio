@@ -15,7 +15,7 @@ export const ContentContainer = ({
   row = false,
   extraContent,
 }: ContentContainerProps) => (
-  <div className="flex flex-col sm:flex-row gap-5 sm:flex-row">
+  <div className="flex flex-col justify-between sm:flex-row gap-5 sm:flex-row">
     <div
       className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24`}
     >
