@@ -17,7 +17,7 @@ export const ContentContainer = ({
 }: ContentContainerProps) => (
   <div className="flex flex-col justify-between sm:flex-row gap-5 sm:flex-row">
     <div
-      className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24`}
+      className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24 w-full`}
     >
       {title && (
         <h6 className={`text-cyan-400 mb-5 ${row && "sm:w-1/2"} ${titleSize}`}>

@@ -8,6 +8,7 @@ import profilePic from "@/assets/headerImages/profilePic.png";
 import { StackedCards } from "@/application/components/StackedCards";
 import { darwin, arnoldClark, goGirl, VP } from "@/assets/porfolioImages/index"
 import { NavLink } from "react-router-dom";
+import { scrollToTop } from "@/utilities/scrollToTop";
 
 export const Home = () => (
   <div className="flex flex-col">
@@ -45,7 +46,6 @@ export const Home = () => (
         items={serviceOptions}
         columns="1fr 1fr 1fr"
         gap="2rem"
-        className="items-center sm:flex-row"
       />
     </ContentContainer>
     <ContentContainer
@@ -56,10 +56,11 @@ export const Home = () => (
       }
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat voluptates amet doloribus quod, similique autem dicta!
-      <div className="flex justify-center sm:justify-end mt-8">
+      <div className="flex justify-center sm:justify-start mt-8">
         <NavLink
-          className="hover:hover:text-cyan-500 underline"
+          className="text-cyan-500 underline"
           to={"/portfolio"}
+          onClick={() => scrollToTop()}
         >
           VIEW ALL
         </NavLink>

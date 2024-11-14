@@ -16,6 +16,30 @@ export const skillsMapper = [
   { title: "Tools", icons: ["sass", "git", "github"] },
 ];
 
+export const experienceList = [
+  {
+    yearsServed: "2023 - 2024",
+    companyName: "Victorian Plumbing",
+    jobTitle: "FRONTEND DEVELOPER",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
+  },
+  {
+    yearsServed: "2022 - 2023",
+    companyName: "Made by Sauce",
+    jobTitle: "FRONTEND DEVELOPER",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
+  },
+  {
+    yearsServed: "2021 - 2022",
+    companyName: "Big Marketing",
+    jobTitle: "JUNIOR FRONTEND DEVELOPER",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
+  },
+];
+
 // PORTFOLIO PAGE
 export const serviceOptions = [
   {
