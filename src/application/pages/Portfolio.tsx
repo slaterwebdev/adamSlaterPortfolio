@@ -15,7 +15,6 @@ export const Portfolio = () => {
         <Grid
           items={[darwin, goGirl, arnoldClark, VP]}
           columns="1fr 1fr 1fr"
-          // className="items-center sm:flex-row"
         />
       </ContentContainer>
     </>

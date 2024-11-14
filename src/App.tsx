@@ -15,7 +15,7 @@ function App() {
 
           <Navbar links={getFormattedLinks} title="ADAM SLATER" logo={logo} />
 
-          <div className="px-4 z-10 max-w-screen-xl">
+          <div className="px-4 z-10 max-w-screen-xl w-full">
             <Routes>{routes}</Routes>
           </div>
 
