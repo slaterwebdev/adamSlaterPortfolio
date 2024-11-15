@@ -1,5 +1,5 @@
-import { PageTemplate } from "@/application/components/PageTemplate";
-import { Container } from "@/application/components/Container";
+import { PageTemplate } from "@/application/components/layout/PageTemplate";
+import { Container } from "@/application/components/layout/Container";
 import { Accordion } from "@/application/components/Accordion";
 import { experienceList, skillsMapper } from "@/constants/constants";
 import { ParallaxImage } from "@/application/components/ParallaxImage";

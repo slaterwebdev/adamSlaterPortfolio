@@ -1,5 +1,5 @@
-import { Container } from "@/application/components/Container";
-import { PageTemplate } from "@/application/components/PageTemplate";
+import { Container } from "@/application/components/layout/Container";
+import { PageTemplate } from "@/application/components/layout/PageTemplate";
 import contactHero from "@/assets/heros/contact.jpg";
 
 export const Contact = () => (

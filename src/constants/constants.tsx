@@ -20,7 +20,7 @@ export const experienceList: Experience[] = [
   {
     yearsServed: "2023 - 2024",
     companyName: "Victorian Plumbing",
-    jobTitle: "FRONTEND DEVELOPER",
+    jobTitle: "MID - SENIOR FRONTEND DEVELOPER",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
   },

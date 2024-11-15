@@ -1,6 +1,6 @@
-import { PageTemplate } from "@/application/components/PageTemplate";
+import { PageTemplate } from "@/application/components/layout/PageTemplate";
 import { Grid } from "@/application/components/Grid";
-import { Container } from "@/application/components/Container";
+import { Container } from "@/application/components/layout/Container";
 import { homeContent, serviceOptions } from "@/constants/constants";
 import { ParallaxImage } from "@/application/components/ParallaxImage";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
@@ -49,16 +49,19 @@ export const Home = () => (
         <StackedCards cards={["darwin", "goGirl", "arnoldClark", "vp"]} />
       }
     >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-      deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat voluptates
-      amet doloribus quod, similique autem dicta!
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+        deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat
+        voluptates amet doloribus quod, similique autem dicta!
+      </p>
+
       <div className="flex justify-center sm:justify-start mt-8">
         <NavLink
           className="text-primary underline"
           to={"/portfolio"}
           onClick={() => scrollToTop()}
         >
-          VIEW ALL
+          VIEW MORE
         </NavLink>
       </div>
     </Container>
