@@ -6,7 +6,7 @@ import { ParallaxImage } from "@/application/components/ParallaxImage";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/headerImages/profilePic.png";
 import { StackedCards } from "@/application/components/StackedCards";
-import { darwin, arnoldClark, goGirl, VP } from "@/assets/porfolioImages/index"
+import { darwin, arnoldClark, goGirl, VP } from "@/assets/porfolioImages"
 import { NavLink } from "react-router-dom";
 import { scrollToTop } from "@/utilities/scrollToTop";
 

@@ -1,4 +1,5 @@
 import { FaLaptop, FaMobile, FaPen } from "react-icons/fa";
+import { darwin, goGirl, arnoldClark, VP } from "@/assets/porfolioImages";
 
 // HOME PAGE
 export const homeContent = {
@@ -59,6 +60,25 @@ export const serviceOptions = [
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
     ariaLabel: "Pen Icon",
+  },
+];
+
+export const companies = [
+  {
+    url: "https://car.arnoldclarkinsurance.com/assumptions",
+    image: arnoldClark,
+  },
+  {
+    url: "https://www.darwin-insurance.com/",
+    image: darwin,
+  },
+  {
+    url: "https://getquote.gogirl.co.uk/quote/create",
+    image: goGirl,
+  },
+  {
+    url: "https://www.victorianplumbing.co.uk/",
+    image: VP,
   },
 ];
 
