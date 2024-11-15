@@ -20,7 +20,7 @@ export const ContentContainer = ({
       className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24 w-full`}
     >
       {title && (
-        <h6 className={`text-cyan-400 mb-5 ${row && "sm:w-1/2"} ${titleSize}`}>
+        <h6 className={`text-primary mb-5 ${row && "sm:w-1/2"} ${titleSize}`}>
           {title}
         </h6>
       )}

@@ -24,7 +24,7 @@ export const PageIntroduction = ({ content, image }: PageIntroductionProps) => {
               {tagLine && tagLine}
             </h3>
             {(tagLine || title) && (
-              <div className="h-1 bg-slate-400 w-20"></div>
+              <div className="h-1 bg-slate-500 w-20"></div>
             )}
           </header>
 
@@ -44,7 +44,7 @@ export const PageIntroduction = ({ content, image }: PageIntroductionProps) => {
                 href={`mailto:${email}`}
                 className="block flex gap-5 items-center mb-2 hover:scale-105"
               >
-                <FaMailBulk className="text-cyan-400" />
+                <FaMailBulk className="text-primary" />
                 {email}
               </a>
             )}
@@ -53,7 +53,7 @@ export const PageIntroduction = ({ content, image }: PageIntroductionProps) => {
                 href={`tel:+${phone}`}
                 className="flex gap-5 items-center hover:scale-105"
               >
-                <FaPhone className="text-cyan-400" />
+                <FaPhone className="text-primary" />
                 {phone}
               </a>
             )}

@@ -1,12 +1,11 @@
 import { PageIntroduction } from "@/application/components/PageIntroduction";
 import { Grid } from "@/application/components/Grid";
 import { ContentContainer } from "@/application/components/ContentContainer";
-import { homeContent, serviceOptions } from "@/constants/constants";
+import { employers, homeContent, serviceOptions } from "@/constants/constants";
 import { ParallaxImage } from "@/application/components/ParallaxImage";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/headerImages/profilePic.png";
 import { StackedCards } from "@/application/components/StackedCards";
-import { darwin, arnoldClark, goGirl, VP } from "@/assets/porfolioImages"
 import { NavLink } from "react-router-dom";
 import { scrollToTop } from "@/utilities/scrollToTop";
 
@@ -42,23 +41,19 @@ export const Home = () => (
     </ContentContainer>
     <ParallaxImage imageUrl={parallaxImageUrl} />
     <ContentContainer title="What I do">
-      <Grid
-        items={serviceOptions}
-        columns="1fr 1fr 1fr"
-        gap="2rem"
-      />
+      <Grid items={serviceOptions} columns="1fr 1fr 1fr" gap="2rem" />
     </ContentContainer>
     <ContentContainer
       titleSize="text-3xl sm:text-5xl"
       title="Check out some of my previous work"
-      extraContent={
-        <StackedCards cardImageURLs={[VP, arnoldClark, goGirl, darwin]} />
-      }
+      extraContent={<StackedCards cards={employers} />}
     >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat voluptates amet doloribus quod, similique autem dicta!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat voluptates
+      amet doloribus quod, similique autem dicta!
       <div className="flex justify-center sm:justify-start mt-8">
         <NavLink
-          className="text-cyan-500 underline"
+          className="text-primary underline"
           to={"/portfolio"}
           onClick={() => scrollToTop()}
         >

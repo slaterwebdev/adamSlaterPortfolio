@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 type StackedCardsProps = {
   cardHeight?: number;
   cardWidth?: number;
-  cardImageURLs?: string[];
+  cards: Array<{ url?: string; imageSrc?: string }>;
 };
 
 const baseStyles = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat`;
@@ -17,7 +17,7 @@ const generateRandomDegrees = () => {
 export const StackedCards = ({
   cardHeight = 205,
   cardWidth = 320,
-  cardImageURLs = [],
+  cards = [],
 }: StackedCardsProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,8 +31,9 @@ export const StackedCards = ({
         className="flex justify-center items-center group p-4 relative hover:overflow-scroll"
         style={{ height: `${cardHeight + 40}px` }}
       >
-        {cardImageURLs.map((url, index) => (
-          <div
+        {cards.map(({url, imageSrc}, index) => (
+          <a
+            href={isHovered ? url : undefined}
             key={index}
             className={`${baseStyles} ${isHovered ? "rotate-0" : ""}`}
             style={{
@@ -40,13 +41,13 @@ export const StackedCards = ({
               width: `${cardWidth}px`,
               rotate: isHovered ? "0deg" : generateRandomDegrees(),
               transform: isHovered ? `translateX(${index * 120}%)` : undefined,
-              backgroundImage: `url(${url})`,
+              backgroundImage: `url(${imageSrc})`,
             }}
           />
         ))}
       </div>
       {isHovered && (
-        <p className="mt-6 flex justify-center items-center gap-5 text-cyan-400">
+        <p className="mt-6 flex justify-center items-center gap-5 text-primary">
           SCROLL <FaArrowRight />
         </p>
       )}

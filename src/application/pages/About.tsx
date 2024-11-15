@@ -28,7 +28,7 @@ export const About = () => (
                 </h6>
               </p>
               <div className="flex flex-col gap-5">
-                <h2 className="text-cyan-500">{exp.jobTitle}</h2>
+                <h2 className="text-primary">{exp.jobTitle}</h2>
                 <p>{exp.description}</p>
               </div>
             </li>

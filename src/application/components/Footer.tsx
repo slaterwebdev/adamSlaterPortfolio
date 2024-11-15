@@ -24,14 +24,14 @@ export const Footer = ({ links }: FooterProps) => {
           <a
             href="https://github.com/slaterwebdev"
             aria-label="Github"
-            className="hover:text-cyan-400"
+            className="hover:text-primary"
           >
             <FaGithub size={24} />
           </a>
           <a
             href="https://linkedin.com"
             aria-label="LinkedIn"
-            className="hover:text-cyan-400"
+            className="hover:text-primary"
           >
             <FaLinkedin size={24} />
           </a>

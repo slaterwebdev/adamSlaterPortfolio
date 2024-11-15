@@ -1,5 +1,6 @@
 import { FaLaptop, FaMobile, FaPen } from "react-icons/fa";
 import { darwin, goGirl, arnoldClark, VP } from "@/assets/porfolioImages";
+import { Experience, GridItem } from "@/types/types";
 
 // HOME PAGE
 export const homeContent = {
@@ -17,7 +18,7 @@ export const skillsMapper = [
   { title: "Tools", icons: ["sass", "git", "github"] },
 ];
 
-export const experienceList = [
+export const experienceList: Experience[] = [
   {
     yearsServed: "2023 - 2024",
     companyName: "Victorian Plumbing",
@@ -42,43 +43,40 @@ export const experienceList = [
 ];
 
 // PORTFOLIO PAGE
-export const serviceOptions = [
+export const serviceOptions: GridItem[] = [
   {
     icon: <FaLaptop size={24} />,
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
-    ariaLabel: "Laptop Icon",
   },
   {
     icon: <FaMobile size={24} />,
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
-    ariaLabel: "Mobile Icon",
   },
   {
     icon: <FaPen size={24} />,
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
-    ariaLabel: "Pen Icon",
   },
 ];
 
-export const companies = [
+export const employers: GridItem[] = [
   {
     url: "https://car.arnoldclarkinsurance.com/assumptions",
-    image: arnoldClark,
+    imageSrc: arnoldClark,
   },
   {
     url: "https://www.darwin-insurance.com/",
-    image: darwin,
+    imageSrc: darwin,
   },
   {
     url: "https://getquote.gogirl.co.uk/quote/create",
-    image: goGirl,
+    imageSrc: goGirl,
   },
   {
     url: "https://www.victorianplumbing.co.uk/",
-    image: VP,
+    imageSrc: VP,
   },
 ];
 
