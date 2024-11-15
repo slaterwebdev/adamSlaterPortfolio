@@ -1,4 +1,4 @@
-type ContentContainerProps = {
+type ContainerProps = {
   title: string;
   titleSize?: string;
   children?: React.ReactNode;
@@ -7,14 +7,14 @@ type ContentContainerProps = {
   extraContent?: JSX.Element;
 };
 
-export const ContentContainer = ({
+export const Container = ({
   title,
   titleSize = "text-3xl",
   children,
   font = "text-base",
   row = false,
   extraContent,
-}: ContentContainerProps) => (
+}: ContainerProps) => (
   <div className="flex flex-col justify-between sm:flex-row gap-5 sm:flex-row">
     <div
       className={`flex flex-col mb-12 ${row && "sm:flex-row"} sm:mb-24 w-full`}

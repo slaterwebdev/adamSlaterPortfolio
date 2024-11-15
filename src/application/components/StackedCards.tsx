@@ -1,18 +1,15 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { findPortfolioImage } from "@/utilities/imageMapper";
+import { generateRandomDegrees } from "@/utilities/utilities";
 
 type StackedCardsProps = {
   cardHeight?: number;
   cardWidth?: number;
-  cards: Array<{ url?: string; imageSrc?: string }>;
+  cards: string[];
 };
 
-const baseStyles = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat`;
-
-const generateRandomDegrees = () => {
-  const degree = Math.floor(Math.random() * 41) - 20;
-  return `${degree}deg`;
-};
+const BASE_CARD_CLASSES = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat`;
 
 export const StackedCards = ({
   cardHeight = 205,
@@ -31,20 +28,26 @@ export const StackedCards = ({
         className="flex justify-center items-center group p-4 relative hover:overflow-scroll"
         style={{ height: `${cardHeight + 40}px` }}
       >
-        {cards.map(({url, imageSrc}, index) => (
-          <a
-            href={isHovered ? url : undefined}
-            key={index}
-            className={`${baseStyles} ${isHovered ? "rotate-0" : ""}`}
-            style={{
-              height: `${cardHeight}px`,
-              width: `${cardWidth}px`,
-              rotate: isHovered ? "0deg" : generateRandomDegrees(),
-              transform: isHovered ? `translateX(${index * 120}%)` : undefined,
-              backgroundImage: `url(${imageSrc})`,
-            }}
-          />
-        ))}
+        {cards.map((card, index) => {
+          const portfolioImage = findPortfolioImage(card);
+          return (
+            <a
+              key={index}
+              href={isHovered ? portfolioImage?.url : undefined}
+              aria-label={portfolioImage?.name || "Portfolio Image"}
+              className={`${BASE_CARD_CLASSES} ${isHovered ? "rotate-0" : ""}`}
+              style={{
+                height: `${cardHeight}px`,
+                width: `${cardWidth}px`,
+                rotate: isHovered ? "0deg" : generateRandomDegrees(),
+                transform: isHovered
+                  ? `translateX(${index * 120}%)`
+                  : undefined,
+                backgroundImage: `url(${portfolioImage?.src})`,
+              }}
+            />
+          );
+        })}
       </div>
       {isHovered && (
         <p className="mt-6 flex justify-center items-center gap-5 text-primary">

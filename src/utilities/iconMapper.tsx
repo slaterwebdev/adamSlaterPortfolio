@@ -8,6 +8,9 @@ import {
   FaSass,
   FaGit,
   FaGithub,
+  FaMobile,
+  FaLaptop,
+  FaPen,
 } from "react-icons/fa";
 
 export const iconMapper: { [key: string]: JSX.Element } = {
@@ -20,4 +23,7 @@ export const iconMapper: { [key: string]: JSX.Element } = {
   nodeJs: <FaNodeJs color="blue" />,
   git: <FaGit color="orange" />,
   github: <FaGithub />,
+  mobile: <FaMobile size={24} />,
+  laptop: <FaLaptop size={24} />,
+  pen: <FaPen size={24} />,
 };

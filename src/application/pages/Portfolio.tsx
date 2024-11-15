@@ -1,14 +1,21 @@
-import { PageIntroduction } from "@/application/components/PageIntroduction";
-import portfolioHero from "@/assets/headerImages/portfolioHero.jpg";
-import { ContentContainer } from "@/application/components/ContentContainer";
+import { PageTemplate } from "@/application/components/PageTemplate";
+import portfolioHero from "@/assets/heros/portfolio.jpg";
+import { Container } from "@/application/components/Container";
 import { Grid } from "@/application/components/Grid";
-import { employers } from "@/constants/constants";
 
 export const Portfolio = () => (
-  <>
-    <PageIntroduction content={{ title: "Portfolio" }} image={portfolioHero} />
-    <ContentContainer title="Frontend builds">
-      <Grid items={employers} columns="1fr 1fr 1fr" />
-    </ContentContainer>
-  </>
+  <PageTemplate content={{ title: "Portfolio" }} image={portfolioHero}>
+    <Container title="B2C Frontend builds">
+      <Grid
+        items={['darwin', 'goGirl', 'arnoldClark', 'vp']}
+        columns="1fr 1fr 1fr"
+      />
+    </Container>
+    <Container title="B2B Frontend Internal Apps">
+      <Grid
+        items={['howdens', 'vpHelp']}
+        columns="1fr 1fr 1fr"
+      />
+    </Container>
+  </PageTemplate>
 );

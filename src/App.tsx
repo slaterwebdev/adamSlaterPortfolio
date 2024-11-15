@@ -11,14 +11,8 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <div className="relative flex items-center bg-white flex-col overflow-x-hidden">
-          <div className="circleBackdrop absolute -right-64 -top-64 rounded-full bg-gradient-to-r from-primary to-gray-50 opacity-50"></div>
-
           <Navbar links={getFormattedLinks} title="ADAM SLATER" logo={logo} />
-
-          <div className="px-4 z-10 max-w-screen-xl w-full">
-            <Routes>{routes}</Routes>
-          </div>
-
+          <Routes>{routes}</Routes>
           <Footer links={getFormattedLinks} />
         </div>
       </Suspense>

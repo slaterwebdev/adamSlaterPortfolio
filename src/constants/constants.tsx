@@ -1,5 +1,3 @@
-import { FaLaptop, FaMobile, FaPen } from "react-icons/fa";
-import { darwin, goGirl, arnoldClark, VP } from "@/assets/porfolioImages";
 import { Experience, GridItem } from "@/types/types";
 
 // HOME PAGE
@@ -45,38 +43,19 @@ export const experienceList: Experience[] = [
 // PORTFOLIO PAGE
 export const serviceOptions: GridItem[] = [
   {
-    icon: <FaLaptop size={24} />,
+    icon: 'laptop',
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
   {
-    icon: <FaMobile size={24} />,
+    icon: 'mobile',
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
   {
-    icon: <FaPen size={24} />,
+    icon: 'pen',
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
-  },
-];
-
-export const employers: GridItem[] = [
-  {
-    url: "https://car.arnoldclarkinsurance.com/assumptions",
-    imageSrc: arnoldClark,
-  },
-  {
-    url: "https://www.darwin-insurance.com/",
-    imageSrc: darwin,
-  },
-  {
-    url: "https://getquote.gogirl.co.uk/quote/create",
-    imageSrc: goGirl,
-  },
-  {
-    url: "https://www.victorianplumbing.co.uk/",
-    imageSrc: VP,
   },
 ];
 

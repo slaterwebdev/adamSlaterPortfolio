@@ -1,24 +1,23 @@
-import { PageIntroduction } from "@/application/components/PageIntroduction";
+import { PageTemplate } from "@/application/components/PageTemplate";
 import { Grid } from "@/application/components/Grid";
-import { ContentContainer } from "@/application/components/ContentContainer";
-import { employers, homeContent, serviceOptions } from "@/constants/constants";
+import { Container } from "@/application/components/Container";
+import { homeContent, serviceOptions } from "@/constants/constants";
 import { ParallaxImage } from "@/application/components/ParallaxImage";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
-import profilePic from "@/assets/headerImages/profilePic.png";
+import profilePic from "@/assets/heros/profile.png";
 import { StackedCards } from "@/application/components/StackedCards";
 import { NavLink } from "react-router-dom";
-import { scrollToTop } from "@/utilities/scrollToTop";
+import { scrollToTop } from "@/utilities/utilities";
 
 export const Home = () => (
-  <div className="flex flex-col">
-    <PageIntroduction content={homeContent} image={profilePic} />
-    <ContentContainer title="About me" titleSize="text-3xl">
+  <PageTemplate content={homeContent} image={profilePic}>
+    <Container title="About me" titleSize="text-3xl">
       <p className="font-playfair text-3xl font-semibold sm:text-5xl">
         I am an enthusiastic web developer based in New York, with a rich
         experience of over 6 years in website & product design.
       </p>
-    </ContentContainer>
-    <ContentContainer
+    </Container>
+    <Container
       titleSize="text-3xl sm:text-5xl"
       title="I build professional & beautiful websites"
       row
@@ -38,15 +37,17 @@ export const Home = () => (
         aren't forced to accept anything. I give you a variety of options we can
         work on together.
       </p>
-    </ContentContainer>
+    </Container>
     <ParallaxImage imageUrl={parallaxImageUrl} />
-    <ContentContainer title="What I do">
+    <Container title="What I do">
       <Grid items={serviceOptions} columns="1fr 1fr 1fr" gap="2rem" />
-    </ContentContainer>
-    <ContentContainer
+    </Container>
+    <Container
       titleSize="text-3xl sm:text-5xl"
       title="Check out some of my previous work"
-      extraContent={<StackedCards cards={employers} />}
+      extraContent={
+        <StackedCards cards={["darwin", "goGirl", "arnoldClark", "vp"]} />
+      }
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
       deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat voluptates
@@ -60,6 +61,6 @@ export const Home = () => (
           VIEW ALL
         </NavLink>
       </div>
-    </ContentContainer>
-  </div>
+    </Container>
+  </PageTemplate>
 );

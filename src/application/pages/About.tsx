@@ -1,32 +1,34 @@
-import { PageIntroduction } from "@/application/components/PageIntroduction";
-import { ContentContainer } from "@/application/components/ContentContainer";
+import { PageTemplate } from "@/application/components/PageTemplate";
+import { Container } from "@/application/components/Container";
 import { Accordion } from "@/application/components/Accordion";
 import { experienceList, skillsMapper } from "@/constants/constants";
 import { ParallaxImage } from "@/application/components/ParallaxImage";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
-import skillsHero from "@/assets/headerImages/skillsHero.jpg";
+import skillsHero from "@/assets/heros/skills.jpg";
 import { FaChevronCircleRight } from "react-icons/fa";
 
 export const About = () => (
-  <>
-    <PageIntroduction content={{ title: "About" }} image={skillsHero} />
-    <ContentContainer title="About me" titleSize="text-3xl">
+  <PageTemplate content={{ title: "About" }} image={skillsHero}>
+    <Container title="About me" titleSize="text-3xl">
       <p className="font-playfair text-3xl font-semibold sm:text-5xl">
         I am an enthusiastic web developer based in New York, with a rich
         experience of over 6 years in website & product design.
       </p>
-    </ContentContainer>
-    <ContentContainer title="Experience" titleSize="text-3xl">
+    </Container>
+    <Container title="Experience" titleSize="text-3xl">
       <ul>
         {experienceList.map((exp, index) => {
           return (
-            <li key={index} className="flex justify-between gap-10 border-b py-8">
-              <p className="w-1/5">
+            <li
+              key={index}
+              className="flex justify-between gap-10 border-b py-8"
+            >
+              <div className="w-1/5">
                 <h3>{exp.yearsServed}</h3>
                 <h6 className="text-right text-slate-500 flex items-center gap-5">
                   {exp.companyName} <FaChevronCircleRight />
                 </h6>
-              </p>
+              </div>
               <div className="flex flex-col gap-5">
                 <h2 className="text-primary">{exp.jobTitle}</h2>
                 <p>{exp.description}</p>
@@ -35,9 +37,9 @@ export const About = () => (
           );
         })}
       </ul>
-    </ContentContainer>
+    </Container>
     <ParallaxImage imageUrl={parallaxImageUrl} />
-    <ContentContainer
+    <Container
       title="What I can offer"
       extraContent={<Accordion skills={skillsMapper} />}
     >
@@ -46,6 +48,6 @@ export const About = () => (
         delivering the final product, I do everything that falls in between
         these lines.
       </p>
-    </ContentContainer>
-  </>
+    </Container>
+  </PageTemplate>
 );

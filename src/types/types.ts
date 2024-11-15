@@ -6,8 +6,9 @@ export type Experience = {
 };
 
 export type GridItem = {
-  icon?: JSX.Element;
+  name?: string;
+  icon?: string;
   content?: string;
   url?: string;
-  imageSrc?: string;
+  src?: string;
 };
