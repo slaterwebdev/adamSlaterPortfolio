@@ -1,4 +1,4 @@
-import { Experience, GridItem } from "@/types/types";
+import { WorkExperience, GridItem } from "@/application/utils/types";
 
 // HOME PAGE
 export const homeContent = {
@@ -16,7 +16,7 @@ export const skillsMapper = [
   { title: "Tools", icons: ["sass", "git", "github"] },
 ];
 
-export const experienceList: Experience[] = [
+export const experienceList: WorkExperience[] = [
   {
     yearsServed: "2023 - 2024",
     companyName: "Victorian Plumbing",
@@ -43,21 +43,18 @@ export const experienceList: Experience[] = [
 // PORTFOLIO PAGE
 export const serviceOptions: GridItem[] = [
   {
-    icon: 'laptop',
+    icon: "laptop",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
   {
-    icon: 'mobile',
+    icon: "mobile",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
   {
-    icon: 'pen',
+    icon: "pen",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
 ];
-
-// GENERAL
-export const currentYear = new Date().getFullYear();

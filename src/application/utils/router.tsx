@@ -1,6 +1,6 @@
 import { NavLink, Route } from "react-router-dom";
-import { Contact, Home, Portfolio, About } from "@/application/pages";
-import { scrollToTop } from "@/utilities/utilities";
+import { scrollToTop } from "@/application/utils/utilities";
+import { About, Contact, Home, Portfolio } from "@/application/features/pages";
 
 const routeConfig = [
   { path: "", Component: Home },

@@ -1,6 +1,6 @@
-import { GridItem } from "@/types/types";
-import { iconMapper } from "@/utilities/iconMapper";
-import { findPortfolioImage } from "@/utilities/imageMapper";
+import { GridItem } from "@/application/utils/types";
+import { iconMapper } from "@/application/utils/iconMapper";
+import { findPortfolioImage } from "@/application/features/pages/portfolio/imageMapper";
 
 type GridProps = {
   items: (string | GridItem)[];
@@ -32,18 +32,21 @@ const renderContentCard = ({ icon, content }: GridItem) => (
   </div>
 );
 
-export const Grid = ({ items, columns = "1fr 1fr 1fr", gap = ".5rem" }: GridProps) => (
+export const Grid = ({
+  items,
+  columns = "1fr 1fr 1fr",
+  gap = ".5rem",
+}: GridProps) => (
   <div
     className="flex flex-col sm:grid"
     style={{ gridTemplateColumns: columns, gap }}
   >
     {items.map((item, index) => (
-        <div key={index}>
-          {typeof item === "string"
-            ? renderImageCard(item as string)
-            : renderContentCard(item as GridItem)}
-        </div>
-      ))
-    }
+      <div key={index}>
+        {typeof item === "string"
+          ? renderImageCard(item as string)
+          : renderContentCard(item as GridItem)}
+      </div>
+    ))}
   </div>
 );

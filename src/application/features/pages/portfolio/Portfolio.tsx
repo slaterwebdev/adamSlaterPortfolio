@@ -1,6 +1,5 @@
-import { PageTemplate } from "@/application/components/layout/PageTemplate";
+import { PageTemplate, Container } from "@/application/features/layout";
 import portfolioHero from "@/assets/heros/portfolio.jpg";
-import { Container } from "@/application/components/layout/Container";
 import { Grid } from "@/application/components/Grid";
 
 export const Portfolio = () => (

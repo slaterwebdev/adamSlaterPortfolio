@@ -6,7 +6,7 @@ import {
   howdens,
   vpHelp,
 } from "@/assets/porfolio";
-import { GridItem } from "@/types/types";
+import { GridItem } from "../../../utils/types";
 
 const portfolioImages: GridItem[] = [
   {
@@ -40,4 +40,4 @@ const portfolioImages: GridItem[] = [
 ];
 
 export const findPortfolioImage = (imageName: string) =>
-  portfolioImages.find(imageEntry => imageEntry.name === imageName);
+  portfolioImages.find((imageEntry) => imageEntry.name === imageName);

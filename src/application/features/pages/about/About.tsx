@@ -1,8 +1,6 @@
-import { PageTemplate } from "@/application/components/layout/PageTemplate";
-import { Container } from "@/application/components/layout/Container";
-import { Accordion } from "@/application/components/Accordion";
-import { experienceList, skillsMapper } from "@/constants/constants";
-import { ParallaxImage } from "@/application/components/ParallaxImage";
+import { PageTemplate, Container } from "@/application/features/layout";
+import { ParallaxImage, Accordion } from "@/application/components";
+import { experienceList, skillsMapper } from "@/application/utils/constants";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import skillsHero from "@/assets/heros/skills.jpg";
 import { FaChevronCircleRight } from "react-icons/fa";

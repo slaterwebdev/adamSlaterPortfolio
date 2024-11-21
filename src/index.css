@@ -12,20 +12,20 @@
   box-sizing: border-box;
 }
 
-.circleBackdrop {
+.circle-backdrop {
   height: 1000px;
   width: 1000px;
 }
 
 @media (max-width: 1024px) {
-  .circleBackdrop {
+  .circle-backdrop {
     height: 800px;
     width: 800px;
   }
 }
 
 @media (max-width: 640px) {
-  .circleBackdrop {
+  .circle-backdrop {
     height: 700px;
     width: 700px;
   }

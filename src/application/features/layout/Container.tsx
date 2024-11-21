@@ -9,7 +9,7 @@ type ContainerProps = {
 
 export const Container = ({
   title,
-  titleSize = "text-3xl",
+  titleSize = "text-3xl sm:text-5xl",
   children,
   font = "text-base",
   row = false,

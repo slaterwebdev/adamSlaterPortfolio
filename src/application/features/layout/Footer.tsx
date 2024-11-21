@@ -1,4 +1,3 @@
-import { currentYear } from "@/constants/constants";
 import { ReactNode } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
@@ -6,6 +5,8 @@ import { useLocation } from "react-router-dom";
 type FooterProps = {
   links: (pathname: string) => Array<ReactNode>;
 };
+
+const currentYear = new Date().getFullYear();
 
 export const Footer = ({ links }: FooterProps) => {
   const { pathname } = useLocation();
