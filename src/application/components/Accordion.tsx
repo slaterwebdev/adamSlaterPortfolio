@@ -4,13 +4,14 @@ import { iconMapper } from "@/utilities/iconMapper";
 type SkillsProps = {
   skills: Array<{
     title: string;
-    icons: Array<string>;
+    icons?: Array<string>;
+    text?: string;
   }>;
 };
 
 export const Accordion = ({ skills }: SkillsProps) => (
   <div className="accordion-group accordion-group-hover mb-12 rounded-xl w-full sm:w-3/4">
-    {skills.map((skill, i) => {
+    {skills.map(({ title, text, icons }, i) => {
       return (
         <div className="accordion shadow" key={i}>
           <input
@@ -22,18 +23,19 @@ export const Accordion = ({ skills }: SkillsProps) => (
             htmlFor={`accordion-${i}`}
             className="accordion-title bg-gray-800"
           >
-            {skill.title}
+            {title}
           </label>
           <i className="accordion-icon">
             <FaChevronLeft />
           </i>
           <div className="accordion-content">
             <div className="min-h-0 flex items-center justify-center gap-5">
-              {skill.icons.map((iconKey, i) => (
-                <span key={i} className="text-3xl float">
-                  {iconMapper[iconKey]}
-                </span>
-              ))}
+              {text ||
+                icons?.map((iconKey, i) => (
+                  <span key={i} className="text-3xl float">
+                    {iconMapper[iconKey]}
+                  </span>
+                ))}
             </div>
           </div>
         </div>
