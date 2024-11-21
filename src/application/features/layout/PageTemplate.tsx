@@ -67,7 +67,7 @@ const ImageWrapper = ({
   altText: string;
 }) => (
   <div className="flex items-center justify-center">
-    <div className="rounded-full bg-white h-80 w-80 overflow-hidden">
+    <div className="rounded-full bg-white h-80 w-80">
       <img
         src={image}
         alt={`${altText} page picture`}
