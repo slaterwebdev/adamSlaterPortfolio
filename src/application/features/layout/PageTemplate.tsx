@@ -13,7 +13,7 @@ type PageTemplateProps = {
   children?: ReactNode;
 };
 
-const ContentSection = ({ content }: Pick<PageTemplateProps, "content">) => {
+const Introduction = ({ content }: Pick<PageTemplateProps, "content">) => {
   const { tagLine, title, subTitle, email, phone } = content;
   return (
     <div className="flex items-center">
@@ -25,9 +25,7 @@ const ContentSection = ({ content }: Pick<PageTemplateProps, "content">) => {
           {(tagLine || title) && (
             <div className="bg-slate-500 w-20 h-1 mb-4 lg:mb-8"></div>
           )}
-          <h1 className="text-5xl font-bold text-black lg:text-8xl">
-            {title}
-          </h1>
+          <h1 className="text-5xl font-bold text-black lg:text-8xl">{title}</h1>
           {subTitle && (
             <h2 className="text-3xl font-semibold mb-10 lg:text-4xl">
               {subTitle}
@@ -67,7 +65,7 @@ const ImageWrapper = ({
   altText: string;
 }) => (
   <div className="flex items-center justify-center">
-    <div className="rounded-full bg-white h-80 w-80">
+    <div className="rounded-full bg-white h-80 w-80 overflow-hidden">
       <img
         src={image}
         alt={`${altText} page picture`}
@@ -86,7 +84,7 @@ export const PageTemplate = ({
     <div className="circle-backdrop absolute -right-64 -top-64 rounded-full bg-gradient-to-r from-primary to-gray-50 opacity-50"></div>
 
     <section className="flex mt-20 sm:mt-0 flex-col-reverse mb-12 sm:flex-row max-h-[800px] justify-between sm:h-screen lg:gap-20 relative">
-      <ContentSection content={content} />
+      <Introduction content={content} />
       <ImageWrapper image={image} altText={content.title} />
     </section>
 

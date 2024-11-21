@@ -1,14 +1,13 @@
 export type WorkExperience = {
   yearsServed: string;
-  companyName: string;
+  id: string;
   jobTitle: string;
-  description: string;
+  content: string;
 };
 
 export type GridItem = {
-  name?: string;
-  icon?: string;
+  id: string;
   content?: string;
   url?: string;
   src?: string;
-};
+}

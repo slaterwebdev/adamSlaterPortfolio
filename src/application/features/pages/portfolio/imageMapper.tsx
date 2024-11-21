@@ -10,34 +10,34 @@ import { GridItem } from "../../../utils/types";
 
 const portfolioImages: GridItem[] = [
   {
-    name: "arnoldClark",
+    id: "arnoldClark",
     url: "https://car.arnoldclarkinsurance.com/assumptions",
     src: arnoldClark,
   },
   {
-    name: "darwin",
+    id: "darwin",
     url: "https://www.darwin-insurance.com/",
     src: darwin,
   },
   {
-    name: "goGirl",
+    id: "goGirl",
     url: "https://getquote.gogirl.co.uk/quote/create",
     src: goGirl,
   },
   {
-    name: "vp",
+    id: "vp",
     url: "https://www.victorianplumbing.co.uk/",
     src: vp,
   },
   {
-    name: "howdens",
+    id: "howdens",
     src: howdens,
   },
   {
-    name: "vpHelp",
+    id: "vpHelp",
     src: vpHelp,
   },
 ];
 
 export const findPortfolioImage = (imageName: string) =>
-  portfolioImages.find((imageEntry) => imageEntry.name === imageName);
+  portfolioImages.find((imageEntry) => imageEntry.id === imageName);

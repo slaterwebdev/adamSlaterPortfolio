@@ -19,23 +19,23 @@ export const skillsMapper = [
 export const experienceList: WorkExperience[] = [
   {
     yearsServed: "2023 - 2024",
-    companyName: "Victorian Plumbing",
+    id: "Victorian Plumbing",
     jobTitle: "MID - SENIOR FRONTEND DEVELOPER",
-    description:
+    content:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
   },
   {
     yearsServed: "2022 - 2023",
-    companyName: "Made by Sauce",
+    id: "Made by Sauce",
     jobTitle: "FRONTEND DEVELOPER",
-    description:
+    content:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
   },
   {
     yearsServed: "2021 - 2022",
-    companyName: "Big Marketing",
+    id: "Big Marketing",
     jobTitle: "JUNIOR FRONTEND DEVELOPER",
-    description:
+    content:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
   },
 ];
@@ -43,17 +43,17 @@ export const experienceList: WorkExperience[] = [
 // PORTFOLIO PAGE
 export const serviceOptions: GridItem[] = [
   {
-    icon: "laptop",
+    id: "laptop",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
   {
-    icon: "mobile",
+    id: "mobile",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
   {
-    icon: "pen",
+    id: "pen",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },

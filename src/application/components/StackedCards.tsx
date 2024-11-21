@@ -32,9 +32,9 @@ export const StackedCards = ({
             : `rotate(${generateRandomDegrees()})`;
           return (
             <a
-              key={portfolioImage?.name}
+              key={portfolioImage?.id}
               href={isHovered ? portfolioImage?.url : undefined}
-              aria-label={portfolioImage?.name || "Portfolio Image"}
+              aria-label={portfolioImage?.id || "Portfolio Image"}
               className={BASE_CARD_CLASSES}
               style={{
                 transform: transformValue,

@@ -1,21 +1,25 @@
 import { NavLink } from "react-router-dom";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/heros/profile.png";
-import { homeContent, serviceOptions } from "@/application/utils/constants";
+import {
+  homeContent,
+  serviceOptions,
+} from "@/application/features/pages/constants";
 import { scrollToTop } from "@/application/utils/utilities";
-import { PageTemplate, Container } from "@/application/features/layout";
+import { PageTemplate, Section } from "@/application/features/layout";
 import { Grid, ParallaxImage, StackedCards } from "@/application/components";
 
 export const Home = () => (
   <PageTemplate content={homeContent} image={profilePic}>
-    <Container title="About me" titleSize="text-3xl">
+    <Section title="About me" titleSize="text-3xl">
       <p className="font-playfair font-semibold text-3xl sm:text-5xl">
         I am an enthusiastic web developer based in New York, with a rich
         experience of over 6 years in website & product design.
       </p>
-    </Container>
-    <Container title="I build professional & beautiful websites" row>
-      <p className="mb-6">
+    </Section>
+
+    <Section title="I build professional & beautiful websites" row>
+      <p>
         With years of experience in graphic and web design I have mastered the
         skills of understanding client requirements according to the latest
         trends. I have worked with businesses from different niches so you can
@@ -30,14 +34,17 @@ export const Home = () => (
         aren't forced to accept anything. I give you a variety of options we can
         work on together.
       </p>
-    </Container>
+    </Section>
+
     <ParallaxImage imageUrl={parallaxImageUrl} />
-    <Container title="What I do">
+
+    <Section title="What I do">
       <Grid items={serviceOptions} columns="1fr 1fr 1fr" gap="2rem" />
-    </Container>
-    <Container
+    </Section>
+
+    <Section
       title="Check out some of my previous work"
-      extraContent={
+      sideContent={
         <StackedCards cards={["darwin", "goGirl", "arnoldClark", "vp"]} />
       }
     >
@@ -47,7 +54,7 @@ export const Home = () => (
         voluptates amet doloribus quod, similique autem dicta!
       </p>
 
-      <div className="flex justify-center sm:justify-start mt-8">
+      <div className="flex justify-center sm:justify-start">
         <NavLink
           className="text-primary underline"
           to={"/portfolio"}
@@ -56,6 +63,6 @@ export const Home = () => (
           VIEW MORE
         </NavLink>
       </div>
-    </Container>
+    </Section>
   </PageTemplate>
 );
