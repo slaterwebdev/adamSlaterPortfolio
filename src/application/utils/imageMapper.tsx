@@ -6,7 +6,7 @@ import {
   howdens,
   vpHelp,
 } from "@/assets/porfolio";
-import { GridItem } from "../../../utils/types";
+import { GridItem } from "@/application/utils/types";
 
 const portfolioImages: GridItem[] = [
   {

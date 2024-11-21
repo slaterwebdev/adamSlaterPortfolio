@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { findPortfolioImage } from "@/application/features/pages/portfolio/imageMapper";
+import { findPortfolioImage } from "@/application/utils/imageMapper";
 import { generateRandomDegrees } from "@/application/utils/utilities";
 
 type StackedCardsProps = {
@@ -11,9 +11,7 @@ type StackedCardsProps = {
 
 const BASE_CARD_CLASSES = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat h-[205px] w-[320px]`;
 
-export const StackedCards = ({
-  cards = [],
-}: StackedCardsProps) => {
+export const StackedCards = ({ cards = [] }: StackedCardsProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -22,9 +20,7 @@ export const StackedCards = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div
-        className="flex justify-center items-center group p-4 relative hover:overflow-scroll mb-6 h-[245px]"
-      >
+      <div className="flex justify-center items-center group p-4 relative hover:overflow-scroll mb-6 h-[245px]">
         {cards.map((card, index) => {
           const portfolioImage = findPortfolioImage(card);
           const transformValue = isHovered

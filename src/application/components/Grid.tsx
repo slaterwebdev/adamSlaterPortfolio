@@ -1,6 +1,6 @@
-import { GridItem} from "@/application/utils/types";
+import { GridItem } from "@/application/utils/types";
 import { iconMapper } from "@/application/utils/iconMapper";
-import { findPortfolioImage } from "@/application/features/pages/portfolio/imageMapper";
+import { findPortfolioImage } from "@/application/utils/imageMapper";
 
 type GridProps = {
   items: (string | GridItem)[];
@@ -26,7 +26,10 @@ const renderImageCard = (item: string) => {
 };
 
 const renderContentCard = ({ id, content }: GridItem) => (
-  <div key={id} className="flex justify-between gap-5 items-center sm:mb-0 sm:flex-col">
+  <div
+    key={id}
+    className="flex justify-between gap-5 items-center sm:mb-0 sm:flex-col"
+  >
     {id && <i className="hover:text-primary">{iconMapper[id]}</i>}
     {content && <p>{content}</p>}
   </div>
