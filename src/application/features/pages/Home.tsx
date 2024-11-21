@@ -1,10 +1,7 @@
 import { NavLink } from "react-router-dom";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/heros/profile.png";
-import {
-  homeContent,
-  serviceOptions,
-} from "@/application/features/pages/constants";
+import { homeContent, serviceOptions } from "@/application/utils/constants";
 import { scrollToTop } from "@/application/utils/utilities";
 import { PageTemplate, Section } from "@/application/features/layout";
 import { Grid, ParallaxImage, StackedCards } from "@/application/components";
@@ -12,7 +9,7 @@ import { Grid, ParallaxImage, StackedCards } from "@/application/components";
 export const Home = () => (
   <PageTemplate content={homeContent} image={profilePic}>
     <Section title="About me" titleSize="text-3xl">
-      <p className="font-playfair font-semibold text-3xl sm:text-5xl">
+      <p className="font-playfair font-semibold sm:text-5xl">
         I am an enthusiastic web developer based in New York, with a rich
         experience of over 6 years in website & product design.
       </p>
@@ -38,8 +35,8 @@ export const Home = () => (
 
     <ParallaxImage imageUrl={parallaxImageUrl} />
 
-    <Section title="What I do">
-      <Grid items={serviceOptions} columns="1fr 1fr 1fr" gap="2rem" />
+    <Section title="What I do" titleSize="text-3xl">
+      <Grid items={serviceOptions} gap="2rem" />
     </Section>
 
     <Section
@@ -53,16 +50,13 @@ export const Home = () => (
         deleniti sapiente reiciendis nesciunt quia in, voluptas fugiat
         voluptates amet doloribus quod, similique autem dicta!
       </p>
-
-      <div className="flex justify-center sm:justify-start">
-        <NavLink
-          className="text-primary underline"
-          to={"/portfolio"}
-          onClick={() => scrollToTop()}
-        >
-          VIEW MORE
-        </NavLink>
-      </div>
+      <NavLink
+        className="text-primary underline block text-center sm:text-left"
+        to={"/portfolio"}
+        onClick={() => scrollToTop()}
+      >
+        VIEW MORE
+      </NavLink>
     </Section>
   </PageTemplate>
 );

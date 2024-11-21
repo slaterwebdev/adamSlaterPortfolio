@@ -7,7 +7,6 @@ export const Portfolio = () => (
     <Section title="B2C Frontend builds">
       <Grid
         items={["darwin", "goGirl", "arnoldClark", "vp"]}
-        columns="1fr 1fr 1fr"
       />
     </Section>
     <Section title="B2B Frontend Internal Apps">

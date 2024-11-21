@@ -1,4 +1,4 @@
-import { WorkExperience, GridItem } from "@/application/utils/types";
+import { GridItem, WorkExperience } from "@/application/utils/types";
 
 // HOME PAGE
 export const homeContent = {
