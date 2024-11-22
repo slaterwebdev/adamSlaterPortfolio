@@ -1,9 +1,13 @@
-import { PageTemplate, Section } from "@/application/features/layout";
-import { ParallaxImage, Accordion } from "@/application/components";
-import { experienceList, skillsMapper } from "@/application/utils/constants";
+import {
+  PageTemplate,
+  Section,
+  ListItem,
+  ParallaxImage,
+  Accordion,
+} from "@/components";
+import { experienceList, skillsMapper } from "@/constants/constants";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import skillsHero from "@/assets/heros/skills.jpg";
-import { ExperienceItem } from "./components/ExperienceItem";
 
 export const About = () => (
   <PageTemplate content={{ title: "About" }} image={skillsHero}>
@@ -15,15 +19,20 @@ export const About = () => (
     </Section>
     <Section title="Experience" titleSize="text-3xl">
       <ul>
-        {experienceList.map((experience) => (
-          <ExperienceItem key={experience.id} experience={experience} />
+        {experienceList.map(({ yearsServed, id, jobTitle, content }) => (
+          <ListItem
+            key={id}
+            title={jobTitle}
+            description={content}
+            metadata={[{ value: yearsServed, name: id }]}
+          />
         ))}
       </ul>
     </Section>
     <ParallaxImage imageUrl={parallaxImageUrl} />
     <Section
       title="What I can offer"
-      sideContent={<Accordion skills={skillsMapper} />}
+      sideContent={<Accordion items={skillsMapper} />}
     >
       <p>
         From understanding your requirements, designing a blueprint and

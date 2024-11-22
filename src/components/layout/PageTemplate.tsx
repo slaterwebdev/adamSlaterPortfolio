@@ -70,6 +70,7 @@ const ImageWrapper = ({
         src={image}
         alt={`${altText} page picture`}
         className="object-cover w-full max-w-md"
+        loading="lazy"
       />
     </div>
   </div>

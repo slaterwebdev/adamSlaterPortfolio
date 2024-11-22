@@ -1,6 +1,6 @@
-import { GridItem } from "@/application/utils/types";
-import { iconMapper } from "@/application/utils/iconMapper";
-import { findPortfolioImage } from "@/application/utils/imageMapper";
+import { GridItem } from "@/utils/types";
+import { iconMapper } from "@/utils/iconMapper";
+import { findPortfolioImage } from "@/utils/imageMapper";
 
 type GridProps = {
   items: (string | GridItem)[];

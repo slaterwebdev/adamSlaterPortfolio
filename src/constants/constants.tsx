@@ -1,4 +1,7 @@
-import { GridItem, WorkExperience } from "@/application/utils/types";
+//GENERAL
+export const linkedinURL = "https://www.linkedin.com/in/adam-slater-web-dev/";
+export const githubURL = "https://github.com/slaterwebdev"
+export const portfolioRepoURL = "https://github.com/slaterwebdev/adamSlaterPortfolio";
 
 // HOME PAGE
 export const homeContent = {
@@ -16,7 +19,7 @@ export const skillsMapper = [
   { title: "Tools", icons: ["sass", "git", "github"] },
 ];
 
-export const experienceList: WorkExperience[] = [
+export const experienceList = [
   {
     yearsServed: "2023 - 2024",
     id: "Victorian Plumbing",
@@ -41,7 +44,7 @@ export const experienceList: WorkExperience[] = [
 ];
 
 // PORTFOLIO PAGE
-export const serviceOptions: GridItem[] = [
+export const serviceOptions = [
   {
     id: "laptop",
     content:
@@ -58,3 +61,6 @@ export const serviceOptions: GridItem[] = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
 ];
+
+export const B2CImageIds = ["darwin", "goGirl", "arnoldClark", "vp"];
+export const B2BImageIds = ["howdens", "vpHelp"];

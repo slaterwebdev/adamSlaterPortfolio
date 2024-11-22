@@ -1,4 +1,4 @@
-import { Section, PageTemplate } from "@/application/features/layout";
+import { Section, PageTemplate } from "@/components";
 import contactHero from "@/assets/heros/contact.jpg";
 
 export const Contact = () => (

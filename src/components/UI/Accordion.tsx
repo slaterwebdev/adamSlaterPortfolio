@@ -1,40 +1,43 @@
+import { iconMapper } from "@/utils/iconMapper";
 import { FaChevronLeft } from "react-icons/fa";
-import { iconMapper } from "@/application/utils/iconMapper";
 
-type SkillsProps = {
-  skills: Array<{
+type AccordionProps = {
+  items: {
     title: string;
-    icons?: Array<string>;
     text?: string;
-  }>;
+    icons?: string[];
+  }[];
 };
 
-export const Accordion = ({ skills }: SkillsProps) => (
+export const Accordion: React.FC<AccordionProps> = ({ items }) => (
   <div className="accordion-group accordion-group-hover mb-12 rounded-xl w-full sm:w-3/4">
-    {skills.map(({ title, text, icons }, i) => (
-      <div className="accordion shadow" key={i}>
+    {items.map(({ title, text, icons }, index) => (
+      <div className="accordion shadow" key={index}>
         <input
           type="checkbox"
-          id={`accordion-${i}`}
+          id={`accordion-${index}`}
           className="accordion-toggle"
         />
         <label
-          htmlFor={`accordion-${i}`}
+          htmlFor={`accordion-${index}`}
           className="accordion-title bg-gray-800"
         >
-          {title}
+          <div className="flex items-center justify-between">
+            <span>{title}</span>
+            <FaChevronLeft className="accordion-icon" />
+          </div>
         </label>
-        <i className="accordion-icon">
-          <FaChevronLeft />
-        </i>
         <div className="accordion-content">
           <div className="min-h-0 flex items-center justify-center gap-5">
-            {text ||
+            {text ? (
+              <p>{text}</p>
+            ) : (
               icons?.map((iconKey, i) => (
                 <span key={i} className="text-3xl float">
                   {iconMapper[iconKey]}
                 </span>
-              ))}
+              ))
+            )}
           </div>
         </div>
       </div>

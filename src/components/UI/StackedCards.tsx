@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { findPortfolioImage } from "@/application/utils/imageMapper";
-import { generateRandomDegrees } from "@/application/utils/utilities";
+import { findPortfolioImage } from "@/utils/imageMapper";
+import { generateRandomDegrees } from "@/utils/utilities";
 
 type StackedCardsProps = {
   cardHeight?: number;

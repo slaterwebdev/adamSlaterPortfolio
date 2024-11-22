@@ -1,3 +1,4 @@
+import { githubURL, linkedinURL } from "@/constants/constants";
 import { ReactNode } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
@@ -23,14 +24,14 @@ export const Footer = ({ links }: FooterProps) => {
 
         <div className="flex gap-4">
           <a
-            href="https://github.com/slaterwebdev"
+            href={githubURL}
             aria-label="Github"
             className="hover:text-primary"
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href={linkedinURL}
             aria-label="LinkedIn"
             className="hover:text-primary"
           >

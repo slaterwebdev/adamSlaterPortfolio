@@ -1,18 +1,40 @@
 import { NavLink } from "react-router-dom";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/heros/profile.png";
-import { homeContent, serviceOptions } from "@/application/utils/constants";
-import { scrollToTop } from "@/application/utils/utilities";
-import { PageTemplate, Section } from "@/application/features/layout";
-import { Grid, ParallaxImage, StackedCards } from "@/application/components";
+import {
+  homeContent,
+  B2CImageIds,
+  serviceOptions,
+} from "@/constants/constants";
+import { scrollToTop } from "@/utils/utilities";
+import {
+  PageTemplate,
+  Section,
+  Grid,
+  ParallaxImage,
+  StackedCards,
+} from "@/components";
 
 const AboutSection = () => (
-  <Section title="About me" titleSize="text-3xl">
-    <p className="font-playfair font-semibold sm:text-5xl">
-      I am an enthusiastic web developer based in New York, with a rich
-      experience of over 6 years in website & product design.
-    </p>
-  </Section>
+  <>
+    <Section title="About me" titleSize="text-3xl">
+      <p className="font-playfair font-semibold sm:text-5xl">
+        I am an enthusiastic web developer based in New York, with a rich
+        experience of over 6 years in website & product design.
+      </p>
+    </Section>
+    <Section title="I build professional & beautiful websites" row>
+      <p>
+        With years of experience in graphic and web design I have mastered the
+        skills of understanding client requirements according to the latest
+        trends.
+      </p>
+      <p>
+        I have worked on various projects that are already live, and I can help
+        you with the best possible suggestions and ideas.
+      </p>
+    </Section>
+  </>
 );
 
 const ServicesSection = () => (
@@ -24,9 +46,7 @@ const ServicesSection = () => (
 const PortfolioSection = () => (
   <Section
     title="Check out some of my previous work"
-    sideContent={
-      <StackedCards cards={["darwin", "goGirl", "arnoldClark", "vp"]} />
-    }
+    sideContent={<StackedCards cards={B2CImageIds} />}
   >
     <p>
       I have worked with various clients to create stunning and functional
@@ -47,17 +67,6 @@ const PortfolioSection = () => (
 export const Home = () => (
   <PageTemplate content={homeContent} image={profilePic}>
     <AboutSection />
-    <Section title="I build professional & beautiful websites" row>
-      <p>
-        With years of experience in graphic and web design I have mastered the
-        skills of understanding client requirements according to the latest
-        trends.
-      </p>
-      <p>
-        I have worked on various projects that are already live, and I can help
-        you with the best possible suggestions and ideas.
-      </p>
-    </Section>
     <ParallaxImage imageUrl={parallaxImageUrl} />
     <ServicesSection />
     <PortfolioSection />
