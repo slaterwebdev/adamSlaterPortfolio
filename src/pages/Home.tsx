@@ -1,11 +1,7 @@
 import { NavLink } from "react-router-dom";
 import parallaxImageUrl from "@/assets/parallax-test.jpg";
 import profilePic from "@/assets/heros/profile.png";
-import {
-  homeContent,
-  B2CImageIds,
-  serviceOptions,
-} from "@/constants/constants";
+import { homeContent, serviceOptions } from "@/constants/constants";
 import { scrollToTop } from "@/utils/utilities";
 import {
   PageTemplate,
@@ -14,6 +10,7 @@ import {
   ParallaxImage,
   StackedCards,
 } from "@/components";
+import { B2CImages } from "@/utils/imageMapper";
 
 const AboutSection = () => (
   <>
@@ -46,7 +43,7 @@ const ServicesSection = () => (
 const PortfolioSection = () => (
   <Section
     title="Check out some of my previous work"
-    sideContent={<StackedCards cards={B2CImageIds} />}
+    sideContent={<StackedCards cards={B2CImages} />}
   >
     <p>
       I have worked with various clients to create stunning and functional

@@ -3,6 +3,8 @@ export type GridItem = {
   content?: string;
   url?: string;
   src?: string;
+  category?: string;
+  employer?: boolean
 };
 
 export type WorkExperience = {

@@ -61,6 +61,3 @@ export const serviceOptions = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
   },
 ];
-
-export const B2CImageIds = ["darwin", "goGirl", "arnoldClark", "vp"];
-export const B2BImageIds = ["howdens", "vpHelp"];

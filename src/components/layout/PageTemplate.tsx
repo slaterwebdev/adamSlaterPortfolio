@@ -1,3 +1,5 @@
+import { portfolioRepoURL } from "@/constants/constants";
+import { iconMapper } from "@/utils/iconMapper";
 import { ReactNode } from "react";
 import { FaPhone, FaMailBulk } from "react-icons/fa";
 
@@ -35,6 +37,7 @@ const Introduction = ({ content }: Pick<PageTemplateProps, "content">) => {
         <div className="text-black font-sans">
           {email && (
             <a
+              target="_blank"
               href={`mailto:${email}`}
               className="block flex gap-5 items-center mb-2 hover:scale-105 transition-transform"
             >
@@ -44,13 +47,22 @@ const Introduction = ({ content }: Pick<PageTemplateProps, "content">) => {
           )}
           {phone && (
             <a
+              target="_blank"
               href={`tel:${phone}`}
-              className="flex gap-5 items-center hover:scale-105 transition-transform"
+              className="flex gap-5 items-center hover:scale-105 transition-transform mb-2"
             >
               <FaPhone className="text-primary" />
               {phone}
             </a>
           )}
+          <a
+            href={portfolioRepoURL}
+            target="_blank"
+            className="text-black flex items-center gap-5 underline hover:scale-110"
+          >
+            {iconMapper["github"]}
+            Site Repository
+          </a>
         </div>
       </div>
     </div>
@@ -84,7 +96,7 @@ export const PageTemplate = ({
   <div className="px-4 z-10 max-w-screen-xl w-full">
     <div className="circle-backdrop absolute -right-64 -top-64 rounded-full bg-gradient-to-r from-primary to-gray-50 opacity-50"></div>
 
-    <section className="flex mt-20 sm:mt-0 flex-col-reverse mb-12 sm:flex-row max-h-[800px] justify-between sm:h-screen lg:gap-20 relative">
+    <section className="flex mt-20 sm:mt-0 flex-col-reverse mb-12 sm:flex-row max-h-[800px] justify-between sm:h-screen gap-10 lg:gap-20 relative">
       <Introduction content={content} />
       <ImageWrapper image={image} altText={content.title} />
     </section>

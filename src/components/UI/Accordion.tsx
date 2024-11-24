@@ -9,7 +9,7 @@ type AccordionProps = {
   }[];
 };
 
-export const Accordion: React.FC<AccordionProps> = ({ items }) => (
+export const Accordion = ({ items }: AccordionProps) => (
   <div className="accordion-group accordion-group-hover mb-12 rounded-xl w-full sm:w-3/4">
     {items.map(({ title, text, icons }, index) => (
       <div className="accordion shadow" key={index}>

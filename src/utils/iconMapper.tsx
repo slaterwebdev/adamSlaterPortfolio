@@ -22,7 +22,7 @@ export const iconMapper: { [key: string]: JSX.Element } = {
   sass: <FaSass color="pink" />,
   nodeJs: <FaNodeJs color="blue" />,
   git: <FaGit color="orange" />,
-  github: <FaGithub />,
+  github: <FaGithub color="black" />,
   mobile: <FaMobile size={24} />,
   laptop: <FaLaptop size={24} />,
   pen: <FaPen size={24} />,

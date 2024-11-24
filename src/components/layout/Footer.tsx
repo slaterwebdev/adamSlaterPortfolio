@@ -26,6 +26,7 @@ export const Footer = ({ links }: FooterProps) => {
           <a
             href={githubURL}
             aria-label="Github"
+            target="_blank"
             className="hover:text-primary"
           >
             <FaGithub size={24} />
@@ -33,6 +34,7 @@ export const Footer = ({ links }: FooterProps) => {
           <a
             href={linkedinURL}
             aria-label="LinkedIn"
+            target="_blank"
             className="hover:text-primary"
           >
             <FaLinkedin size={24} />
