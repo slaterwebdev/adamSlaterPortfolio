@@ -14,9 +14,39 @@ export const homeContent = {
 
 // ABOUT PAGE
 export const skillsMapper = [
-  { title: "Languages", icons: ["javascript", "html", "css"] },
-  { title: "Frameworks & Libraries", icons: ["react", "nodeJs", "vueJs"] },
-  { title: "Tools", icons: ["sass", "git", "github"] },
+  {
+    title: "Languages & Frameworks",
+    icons: [
+      "javascript",
+      "html",
+      "css",
+      "typescript",
+      "react",
+      "nodeJs",
+      "vueJs",
+      "firebase",
+    ],
+  },
+  {
+    title: "Dev Tools & Libraries",
+    icons: [
+      "redux",
+      "tailwind",
+      "sass",
+      "bootstrap",
+      "wordpress",
+      "vite",
+      "webpack",
+    ],
+  },
+  {
+    title: "Platforms & Version Control",
+    icons: ["azure", "github", "git"],
+  },
+  {
+    title: "Dev Practices & Concepts",
+    list: ["REST APIs", "UX/UI" , "Agile Methodologies","Software Design Principles"],
+  },
 ];
 
 export const experienceList = [

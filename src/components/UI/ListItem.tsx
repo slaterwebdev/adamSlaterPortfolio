@@ -3,7 +3,7 @@ import { FaChevronCircleRight } from "react-icons/fa";
 
 type ListItemProps = {
   title: string;
-  description: string;
+  description?: string;
   metadata?: {
     name: string;
     value: string;
@@ -39,7 +39,7 @@ export const ListItem = ({
       )}
       <div className="flex flex-col gap-5">
         <h2 className="text-primary">{title}</h2>
-        <p>{description}</p>
+        {description && <p>{description}</p>}
       </div>
     </li>
   );
