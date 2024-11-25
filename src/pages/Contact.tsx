@@ -7,6 +7,7 @@ type FormField = {
   type: "text" | "email" | "number" | "textarea";
   placeholder: string;
   rows?: number;
+  validate?: (value: string) => string; // Field-specific validation function
 };
 
 type FormData = {
@@ -18,56 +19,88 @@ type FormData = {
 
 export const Form = () => {
   const fields: FormField[] = [
-    { name: "name", type: "text", placeholder: "Enter name" },
-    { name: "email", type: "email", placeholder: "Enter email" },
-    { name: "number", type: "number", placeholder: "Enter number" },
-    { name: "message", type: "textarea", placeholder: "Message", rows: 8 },
+    {
+      name: "name",
+      type: "text",
+      placeholder: "Enter name",
+      validate: (value) => (!value.trim() ? "Name is required." : ""),
+    },
+    {
+      name: "email",
+      type: "email",
+      placeholder: "Enter email",
+      validate: (value) =>
+        /^\S+@\S+\.\S+$/.test(value) ? "" : "Invalid email address.",
+    },
+    {
+      name: "number",
+      type: "number",
+      placeholder: "Enter number",
+      validate: (value) =>
+        /^\d+$/.test(value) ? "" : "Number must be numeric.",
+    },
+    {
+      name: "message",
+      type: "textarea",
+      placeholder: "Message",
+      rows: 8,
+      validate: (value) => (!value.trim() ? "Message is required." : ""),
+    },
   ];
-
-  const initialFormData: FormData = {
-    name: "",
-    email: "",
-    number: "",
-    message: "",
-  };
 
   const defaultInputClasses =
     "w-full bg-white mb-4 border-b p-2 focus:outline-none focus:ring-2 focus:ring-primary";
 
-  const [formData, setFormData] = useState<FormData>(initialFormData);
-  const [errors, setErrors] = useState<Partial<FormData>>({});
+  // Generate initial state dynamically from fields
+  const initialState = fields.reduce(
+    (acc, { name }) => ({ ...acc, [name]: "" }),
+    {} as FormData
+  );
 
+  const [formData, setFormData] = useState<FormData>(initialState);
+  const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  // Handle input changes and validate
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    // Update form data
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
-    setErrors((prev) => ({
-      ...prev,
-      [name]: value.trim() === "",
-    }));
+    // Validate the field dynamically
+    const field = fields.find((f) => f.name === name);
+    if (field?.validate) {
+      const error = field.validate(value);
+      setErrors((prev) => ({ ...prev, [name]: error }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const newErrors = Object.entries(formData).reduce((acc, [key, value]) => {
-      if (!value.trim()) acc[key as keyof FormData] = `${key} is required.`;
-      return acc;
-    }, {} as Partial<FormData>);
+    // Validate all fields on submit
+    const newErrors: Partial<FormData> = {};
+    fields.forEach(({ name, validate }) => {
+      if (validate) {
+        const error = validate(formData[name]);
+        if (error) {
+          newErrors[name] = error;
+        }
+      }
+    });
 
     if (Object.keys(newErrors).length) {
       setErrors(newErrors);
       return;
     }
 
-    setFormData(initialFormData);
-    setErrors({});
+    // On successful submission
+    setFormData(initialState); // Reset form
+    setSuccessMessage("Form submitted successfully!");
+    setTimeout(() => setSuccessMessage(null), 3000); // Clear success message after 3 seconds
   };
 
   return (
@@ -76,7 +109,7 @@ export const Form = () => {
       onSubmit={handleSubmit}
     >
       {fields.map(({ name, type, placeholder, rows }) => (
-        <div key={name}>
+        <div key={name} className="mb-4">
           {type === "textarea" ? (
             <textarea
               name={name}
@@ -84,7 +117,9 @@ export const Form = () => {
               rows={rows}
               value={formData[name]}
               onChange={handleChange}
-              className={defaultInputClasses}
+              className={`${defaultInputClasses} resize-none`}
+              aria-invalid={!!errors[name]}
+              aria-describedby={`${name}-error`}
             ></textarea>
           ) : (
             <input
@@ -94,13 +129,21 @@ export const Form = () => {
               value={formData[name]}
               onChange={handleChange}
               className={defaultInputClasses}
+              aria-invalid={!!errors[name]}
+              aria-describedby={`${name}-error`}
             />
           )}
           {errors[name] && (
-            <p className="text-red-500 text-sm">{`${name.toUpperCase()} is required.`}</p>
+            <p id={`${name}-error`} className="text-red-500 text-sm">
+              {errors[name]}
+            </p>
           )}
         </div>
       ))}
+
+      {successMessage && (
+        <p className="text-green-500 text-sm">{successMessage}</p>
+      )}
 
       <button
         type="submit"
