@@ -10,10 +10,10 @@ type NavbarProps = {
 export const Navbar = ({ links, title, logo }: NavbarProps) => {
   const { pathname } = useLocation();
   return (
-    <div className="flex items-center justify-between bg-transparent backdrop-blur-md rounded-b-md shadow-none z-20 fixed h-20 w-full">
-      <NavLink className="px-0 flex items-center hover:scale-110" to={"/"}>
+    <div className="px-4 flex items-center justify-between bg-transparent backdrop-blur-md rounded-b-md shadow-none z-20 fixed h-20 w-full">
+      <NavLink className="flex items-center hover:scale-110" to={"/"}>
         <img className="w-12" src={logo} alt={`${title} logo`} />
-        <h1 className="font-semibold invisible sm:visible w-">{title}</h1>
+        <h1 className="font-semibold invisible sm:visible">{title}</h1>
       </NavLink>
 
       <div className="gap-4">{links(pathname)}</div>
