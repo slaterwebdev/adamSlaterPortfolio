@@ -27,25 +27,16 @@ export const useForm = (fields: FormField[]) => {
 
   const handleSubmit = (
     e: React.FormEvent,
-    callback: (data: typeof formData) => void
+    processFormData: (data: typeof formData) => void
   ) => {
     e.preventDefault();
-
-    const newErrors = Object.fromEntries(
-      Object.entries(formData).map(([key, value]) => [
-        key,
-        validateField(key, value),
-      ])
-    );
-
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-      callback(formData);
-      setFormData(initialState);
-      setErrors(initialState);
-    }
+    processFormData(formData);
+    setFormData(initialState);
   };
 
-  return { formData, errors, handleChange, handleSubmit };
+  const isSubmitDisabled =
+    Object.values(errors).some((error) => error !== "") || 
+    Object.values(formData).some((value) => value.trim() === "");
+
+  return { formData, errors, handleChange, handleSubmit, isSubmitDisabled };
 };
