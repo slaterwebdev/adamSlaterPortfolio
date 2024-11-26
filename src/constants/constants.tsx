@@ -7,7 +7,7 @@ export const portfolioRepoURL = "https://github.com/slaterwebdev/adamSlaterPortf
 export const homeContent = {
   tagLine: "HELLO, MY NAME IS",
   title: "Adam Slater",
-  subTitle: "Full-Stack dev",
+  subTitle: "Web Developer",
   phone: "07547620652",
   email: "adamslater1996@outlook.com",
 };

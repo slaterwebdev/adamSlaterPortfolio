@@ -3,6 +3,7 @@ export { ListItem } from "./UI/ListItem";
 export { Grid } from "./UI/Grid";
 export { ParallaxImage } from "./UI/ParallaxImage";
 export { StackedCards } from "./UI/StackedCards";
+export { Form } from "./UI/Form";
 export { Section } from "./layout/Section";
 export { Footer } from "./layout/Footer";
 export { Navbar } from "./layout/Navbar";

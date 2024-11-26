@@ -1,18 +1,14 @@
 import { NavLink } from "react-router-dom";
-import parallaxImageUrl from "@/assets/parallax-test.jpg";
-import profilePic from "@/assets/heros/profile.png";
-import { homeContent, serviceOptions } from "@/constants/constants";
+import { serviceOptions } from "@/constants/constants";
 import { scrollToTop } from "@/utils/utilities";
 import {
-  PageTemplate,
   Section,
   Grid,
-  ParallaxImage,
   StackedCards,
 } from "@/components";
 import { B2CImages } from "@/utils/imageMapper";
 
-const AboutSection = () => (
+export const AboutSection = () => (
   <>
     <Section title="About me" titleSize="text-3xl">
       <p className="font-playfair font-semibold sm:text-5xl">
@@ -34,13 +30,13 @@ const AboutSection = () => (
   </>
 );
 
-const ServicesSection = () => (
+export const ServicesSection = () => (
   <Section title="What I do" titleSize="text-3xl">
     <Grid items={serviceOptions} gap="2rem" />
   </Section>
 );
 
-const PortfolioSection = () => (
+export const PortfolioSection = () => (
   <Section
     title="Check out some of my previous work"
     sideContent={<StackedCards cards={B2CImages} />}
@@ -59,13 +55,4 @@ const PortfolioSection = () => (
       VIEW MORE
     </NavLink>
   </Section>
-);
-
-export const Home = () => (
-  <PageTemplate content={homeContent} image={profilePic}>
-    <AboutSection />
-    <ParallaxImage imageUrl={parallaxImageUrl} />
-    <ServicesSection />
-    <PortfolioSection />
-  </PageTemplate>
 );
