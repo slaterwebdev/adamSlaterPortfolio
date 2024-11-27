@@ -19,7 +19,7 @@ export const homeContent = {
 export const skillsMapper: SkillsMapper[] = [
   {
     title: "Languages & Frameworks",
-    items: [
+    icons: [
       "javascript",
       "html",
       "css",
@@ -32,7 +32,7 @@ export const skillsMapper: SkillsMapper[] = [
   },
   {
     title: "Dev Tools & Libraries",
-    items: [
+    icons: [
       "redux",
       "tailwind",
       "sass",
@@ -44,11 +44,11 @@ export const skillsMapper: SkillsMapper[] = [
   },
   {
     title: "Platforms & Version Control",
-    items: ["azure", "github", "git"],
+    icons: ["azure", "github", "git"],
   },
   {
     title: "Dev Practices & Concepts",
-    items: [
+    list: [
       "REST APIs",
       "UX/UI",
       "Agile Methodologies",

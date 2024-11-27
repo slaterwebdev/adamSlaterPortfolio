@@ -24,5 +24,6 @@ export type FormField = {
 
 export type SkillsMapper = {
   title: string;
-  items: Array<string>
+  icons?: Array<string>
+  list?: Array<string>
 }
