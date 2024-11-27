@@ -58,10 +58,20 @@ const Introduction = ({ content }: Pick<PageTemplateProps, "content">) => {
           <a
             href={portfolioRepoURL}
             target="_blank"
-            className="text-black flex items-center gap-5 underline hover:scale-110"
+            className="text-black flex items-center gap-5 underline hover:scale-110 mb-5"
           >
             {iconMapper["github"]}
             Site Repository
+          </a>
+        </div>
+        <div className="max-w-max hover:scale-105 transition-transform">
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary p-2 text-white rounded"
+          >
+            View My CV
           </a>
         </div>
       </div>

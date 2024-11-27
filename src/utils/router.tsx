@@ -15,7 +15,7 @@ export const routes = routeConfig.map(({ path, Component }) => (
 
 export const getRouterLinks = (currentPath: string) =>
   routeConfig.map(({ route, path }) => {
-    const linkStatus = `hover:text-primary px-2 hover:scale-110 ${currentPath === path ? "text-secondary" : "text-white"}`;
+    const linkStatus = `hover:text-primary px-2 hover:scale-110 ${currentPath === path ? "text-secondary" : ""}`;
     return (
       <NavLink
         key={`link-${path}`}

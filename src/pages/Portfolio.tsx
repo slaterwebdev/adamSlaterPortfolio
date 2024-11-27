@@ -6,7 +6,7 @@ export const Portfolio = () => (
   <PageTemplate content={{ title: "Portfolio" }} image={portfolioHero}>
     <Section title="Key B2C Frontend builds" contentStyles="font-playfair">
       <p>
-        These are a few handpicked examples of many B2C client-facing websites
+        A few handpicked examples of many B2C client-facing websites
         where I made major contributions or led the frontend development,
         delivering high-quality, scalable solutions. Each project involved
         crafting responsive, user-focused interfaces, working with large data

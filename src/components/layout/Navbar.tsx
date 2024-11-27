@@ -16,7 +16,7 @@ export const Navbar = ({ links, title, logo }: NavbarProps) => {
         <h1 className="font-semibold invisible sm:visible">{title}</h1>
       </NavLink>
 
-      <div className="gap-4">{links(pathname)}</div>
+      <div className="gap-4 text-black">{links(pathname)}</div>
     </div>
   );
 };

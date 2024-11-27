@@ -56,13 +56,15 @@ export const PortfolioSection = () => (
       websites tailored to their business needs. Go ahead and browse some of my
       available projects.
     </p>
-    <NavLink
-      aria-label="View more projects in portfolio"
-      className="text-primary underline block text-center sm:text-left"
-      to={"/portfolio"}
-      onClick={() => scrollToTop()}
-    >
-      VIEW MORE
-    </NavLink>
+    <div className="text-center sm:text-left">
+      <NavLink
+        aria-label="View more projects in portfolio"
+        className="text-primary underline"
+        to={"/portfolio"}
+        onClick={() => scrollToTop()}
+      >
+        VIEW MORE
+      </NavLink>
+    </div>
   </Section>
 );
