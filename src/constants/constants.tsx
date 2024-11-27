@@ -78,16 +78,16 @@ export const serviceOptions = [
   {
     id: "laptop",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
+      "I excel at building scalable, maintainable web applications using React, Vue.js, and TypeScript, delivering clean, reusable code that drives performance and supports millions of users.",
   },
   {
-    id: "mobile",
+    id: "stack",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
+      "With a strong foundation in frontend development using React and Vue.js, I am expanding into Node.js to deliver seamless, end-to-end solutions. I consistently adapt and grow, always ensuring versatility.",
   },
   {
-    id: "pen",
+    id: "api",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quo ad sunt nostrum sit minus mollitia? Atque perspiciatis dolore voluptatem ratione reiciendis animi suscipit?",
+      "I specialize in integrating REST APIs to power dynamic, data-driven interfaces paired with pixel-perfect UIs, enhancing user experiences, boosting conversions, and streamlining workflows.",
   },
 ];

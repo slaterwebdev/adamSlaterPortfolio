@@ -13,8 +13,8 @@ export const About = () => (
   <PageTemplate content={{ title: "About" }} image={skillsHero}>
     <Section title="About me" titleSize="text-3xl">
       <p className="font-playfair text-3xl font-semibold sm:text-5xl">
-        I am an enthusiastic web developer based in New York, with a rich
-        experience of over 6 years in website & product design.
+        I am an enthusiastic web developer based in the midlands of the UK, with a rich
+        experience of over 3 years in building web applications.
       </p>
     </Section>
     <Section title="Experience" titleSize="text-3xl">

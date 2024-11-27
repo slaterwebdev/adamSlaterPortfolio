@@ -5,11 +5,11 @@ import {
   ParallaxImage,
 } from "@/components";
 import { homeContent } from "@/constants/constants";
-import { AboutSection, PortfolioSection, ServicesSection } from "./HomeComponents";
+import { WelcomeSection, PortfolioSection, ServicesSection } from "./HomeComponents";
 
 export const Home = () => (
   <PageTemplate content={homeContent} image={profilePic}>
-    <AboutSection />
+    <WelcomeSection />
     <ParallaxImage imageUrl={parallaxImageUrl} />
     <ServicesSection />
     <PortfolioSection />

@@ -27,7 +27,8 @@ const renderContentCard = ({ id, content }: GridItem) => (
     key={id}
     className="flex justify-between gap-5 items-center sm:mb-0 sm:flex-col"
   >
-    {id && <i className="hover:text-primary">{iconMapper[id]}</i>}
+    {id &&
+      <i className="hover:text-primary">{iconMapper[id]}</i>}
     {content && <p>{content}</p>}
   </div>
 );

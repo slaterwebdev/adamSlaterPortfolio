@@ -1,37 +1,43 @@
 import { NavLink } from "react-router-dom";
 import { serviceOptions } from "@/constants/constants";
 import { scrollToTop } from "@/utils/utilities";
-import {
-  Section,
-  Grid,
-  StackedCards,
-} from "@/components";
+import { Section, Grid, StackedCards } from "@/components";
 import { B2CImages } from "@/utils/imageMapper";
 
-export const AboutSection = () => (
+export const WelcomeSection = () => (
   <>
-    <Section title="About me" titleSize="text-3xl">
-      <p className="font-playfair font-semibold sm:text-5xl">
-        I am an enthusiastic web developer based in New York, with a rich
-        experience of over 6 years in website & product design.
+    <Section title="Welcome to My Portfolio!" titleSize="text-5xl">
+      <p className="font-playfair font-semibold sm:text-2xl">
+        I am a versatile and highly motivated Web Developer with over three
+        years of hands-on experience crafting complex web applications. I am
+        currently seeking a new role where I can leverage my specialisations to
+        contribute to innovative projects, assist talented teams, and
+        continue driving impactful digital solutions.
       </p>
     </Section>
-    <Section title="I build professional & beautiful websites" row>
+    <Section
+      title="I help to transform ideas into efficent user centred digital products"
+      titleSize="text-3xl"
+      row
+    >
       <p>
-        With years of experience in graphic and web design I have mastered the
-        skills of understanding client requirements according to the latest
-        trends.
+        Whether collaborating on cutting-edge solutions or aiding & leading
+        teams through challenging sprints, my goal is to create seamless,
+        user-focused digital experiences that deliver measurable results.
       </p>
       <p>
-        I have worked on various projects that are already live, and I can help
-        you with the best possible suggestions and ideas.
+        I have contributed to greenfield projects, legacy migrations for the
+        e-commerce leader Victorian Plumbing, and CMS-driven websites for
+        high-profile insurance clients such as Arnold Clark, DARWIN, and
+        Triumph. Recently, I have expanded my expertise into full-stack
+        development by exploring Node.js to enhance my technical capabilities.
       </p>
     </Section>
   </>
 );
 
 export const ServicesSection = () => (
-  <Section title="What I do" titleSize="text-3xl">
+  <Section title="What I bring to the table" titleSize="text-3xl">
     <Grid items={serviceOptions} gap="2rem" />
   </Section>
 );
@@ -42,9 +48,8 @@ export const PortfolioSection = () => (
     sideContent={<StackedCards cards={B2CImages} />}
   >
     <p>
-      I have worked with various clients to create stunning and functional
-      websites tailored to their business needs. Explore more of my projects
-      below.
+      I have worked with various employers to create stunning and functional
+      websites tailored to their business needs. Go ahead and browse some of my available projects.
     </p>
     <NavLink
       aria-label="View more projects in portfolio"

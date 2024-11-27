@@ -1,5 +1,7 @@
-import { FaMobile, FaLaptop, FaPen } from "react-icons/fa";
 import "devicon/devicon.min.css";
+import { FaLaptop } from "react-icons/fa";
+import { RiStackLine } from "react-icons/ri";
+import { AiOutlineApi } from "react-icons/ai";
 
 export const iconMapper: { [key: string]: JSX.Element } = {
   javascript: <i className="devicon-javascript-plain colored"></i>,
@@ -22,7 +24,7 @@ export const iconMapper: { [key: string]: JSX.Element } = {
   git: <i className="devicon-git-plain colored"></i>,
   github: <i className="devicon-github-original colored"></i>,
 
-  mobile: <FaMobile size={24} />,
+  api: <AiOutlineApi size={24} />,
   laptop: <FaLaptop size={24} />,
-  pen: <FaPen size={24} />,
+  stack: <RiStackLine size={24} />,
 };
