@@ -1,7 +1,6 @@
 import { portfolioRepoURL } from "@/constants/constants";
 import { iconMapper } from "@/utils/iconMapper";
 import { ReactNode } from "react";
-import { FaPhone, FaMailBulk } from "react-icons/fa";
 
 type PageTemplateProps = {
   content: {
@@ -41,7 +40,7 @@ const Introduction = ({ content }: Pick<PageTemplateProps, "content">) => {
               href={`mailto:${email}`}
               className="block flex gap-5 items-center mb-2 hover:scale-105 transition-transform"
             >
-              <FaMailBulk className="text-primary" />
+              {iconMapper["email"]}
               {email}
             </a>
           )}
@@ -51,7 +50,7 @@ const Introduction = ({ content }: Pick<PageTemplateProps, "content">) => {
               href={`tel:${phone}`}
               className="flex gap-5 items-center hover:scale-105 transition-transform mb-2"
             >
-              <FaPhone className="text-primary" />
+              {iconMapper["phone"]}
               {phone}
             </a>
           )}

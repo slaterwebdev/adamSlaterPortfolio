@@ -1,6 +1,6 @@
 import { githubURL, linkedinURL } from "@/constants/constants";
+import { iconMapper } from "@/utils/iconMapper";
 import { ReactNode } from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
 type FooterProps = {
@@ -29,7 +29,7 @@ export const Footer = ({ links }: FooterProps) => {
             target="_blank"
             className="hover:text-primary"
           >
-            <FaGithub size={24} />
+            {iconMapper["github"]}
           </a>
           <a
             href={linkedinURL}
@@ -37,7 +37,7 @@ export const Footer = ({ links }: FooterProps) => {
             target="_blank"
             className="hover:text-primary"
           >
-            <FaLinkedin size={24} />
+            {iconMapper["linkedin"]}
           </a>
         </div>
       </div>

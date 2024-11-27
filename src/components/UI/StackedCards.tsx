@@ -36,7 +36,7 @@ export const StackedCards = ({ cards = [] }: { cards: GridItem[] }) => {
       </div>
       {isHovered && (
         <p className="flex justify-center items-center gap-5 text-primary">
-          SCROLL <FaArrowRight />
+          SCROLL {<FaArrowRight />}
         </p>
       )}
     </div>
