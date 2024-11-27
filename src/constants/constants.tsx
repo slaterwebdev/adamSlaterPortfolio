@@ -1,3 +1,6 @@
+import { ExperienceItem, GridItem, SkillsMapper } from "@/utils/types";
+
+
 //GENERAL
 export const linkedinURL = "https://www.linkedin.com/in/adam-slater-web-dev/";
 export const githubURL = "https://github.com/slaterwebdev"
@@ -13,10 +16,10 @@ export const homeContent = {
 };
 
 // ABOUT PAGE
-export const skillsMapper = [
+export const skillsMapper: SkillsMapper[] = [
   {
     title: "Languages & Frameworks",
-    icons: [
+    items: [
       "javascript",
       "html",
       "css",
@@ -29,7 +32,7 @@ export const skillsMapper = [
   },
   {
     title: "Dev Tools & Libraries",
-    icons: [
+    items: [
       "redux",
       "tailwind",
       "sass",
@@ -41,15 +44,20 @@ export const skillsMapper = [
   },
   {
     title: "Platforms & Version Control",
-    icons: ["azure", "github", "git"],
+    items: ["azure", "github", "git"],
   },
   {
     title: "Dev Practices & Concepts",
-    list: ["REST APIs", "UX/UI" , "Agile Methodologies","Software Design Principles"],
+    items: [
+      "REST APIs",
+      "UX/UI",
+      "Agile Methodologies",
+      "Software Design Principles",
+    ],
   },
 ];
 
-export const experienceList = [
+export const experienceList: ExperienceItem[] = [
   {
     yearsServed: "2023 - 2024",
     id: "Victorian Plumbing",
@@ -74,7 +82,7 @@ export const experienceList = [
 ];
 
 // PORTFOLIO PAGE
-export const serviceOptions = [
+export const serviceOptions: GridItem[] = [
   {
     id: "laptop",
     content:

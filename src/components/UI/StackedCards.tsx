@@ -3,15 +3,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { generateRandomDegrees } from "@/utils/utilities";
 import { GridItem } from "@/utils/types";
 
-type StackedCardsProps = {
-  cardHeight?: number;
-  cardWidth?: number;
-  cards: GridItem[];
-};
-
 const BASE_CARD_CLASSES = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat h-[205px] w-[320px]`;
 
-export const StackedCards = ({ cards = [] }: StackedCardsProps) => {
+export const StackedCards = ({ cards = [] }: { cards: GridItem[] }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

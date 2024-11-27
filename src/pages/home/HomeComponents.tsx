@@ -53,7 +53,8 @@ export const PortfolioSection = () => (
   >
     <p>
       I have worked with various employers to create stunning and functional
-      websites tailored to their business needs. Go ahead and browse some of my available projects.
+      websites tailored to their business needs. Go ahead and browse some of my
+      available projects.
     </p>
     <NavLink
       aria-label="View more projects in portfolio"

@@ -1,7 +1,6 @@
-import React from "react";
 import { FaChevronCircleRight } from "react-icons/fa";
 
-type ListItemProps = {
+type ListItem = {
   title: string;
   description?: string;
   metadata?: {
@@ -16,7 +15,7 @@ export const ListItem = ({
   description,
   metadata = [],
   icon = <FaChevronCircleRight />,
-}: ListItemProps) => {
+}: ListItem) => {
   return (
     <li className={`flex justify-between gap-5 sm:gap-6 border-b py-8`}>
       {metadata.length !== 0 ? (

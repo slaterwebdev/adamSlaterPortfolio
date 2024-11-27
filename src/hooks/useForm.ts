@@ -1,12 +1,5 @@
+import { FormField } from "@/utils/types";
 import { useState } from "react";
-
-export type FormField = {
-  name: string;
-  type: "text" | "email" | "number" | "textarea";
-  placeholder: string;
-  rows?: number;
-  validate?: (value: string) => string;
-};
 
 export const useForm = (fields: FormField[]) => {
   const initialState = Object.fromEntries(fields.map(({ name }) => [name, ""]));

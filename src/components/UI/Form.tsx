@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FormField, useForm } from "@/hooks/useForm";
+import { useForm } from "@/hooks/useForm";
+import { FormField } from "@/utils/types";
 
 export const Form = ({ formFields }: { formFields: FormField[] }) => {
   const { formData, errors, handleChange, handleSubmit, isSubmitDisabled } = useForm(formFields);
