@@ -8,8 +8,8 @@ export const WelcomeSection = () => (
   <>
     <Section
       title="Welcome to My Portfolio!"
-      titleSize="text-5xl"
-      childStyles="font-playfair font-semibold sm:text-2xl"
+      titleStyles="text-5xl"
+      contentStyles="font-playfair font-semibold sm:text-2xl"
     >
       <p>
         I am a versatile and highly motivated Web Developer with over three
@@ -21,7 +21,7 @@ export const WelcomeSection = () => (
     </Section>
     <Section
       title="I help to transform ideas into efficent user centred digital products"
-      titleSize="text-3xl"
+      titleStyles="text-3xl"
       row
     >
       <p>
@@ -41,7 +41,7 @@ export const WelcomeSection = () => (
 );
 
 export const ServicesSection = () => (
-  <Section title="What I bring to the table" titleSize="text-3xl">
+  <Section title="What I bring to the table" titleStyles="text-3xl">
     <Grid items={serviceOptions} gap="2rem" />
   </Section>
 );

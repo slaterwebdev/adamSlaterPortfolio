@@ -4,7 +4,7 @@ import { B2BImages, B2CImages, employers } from "@/utils/imageMapper";
 
 export const Portfolio = () => (
   <PageTemplate content={{ title: "Portfolio" }} image={portfolioHero}>
-    <Section title="Key B2C Frontend builds" childStyles="font-playfair">
+    <Section title="Key B2C Frontend builds" contentStyles="font-playfair">
       <p>
         These are a few handpicked examples of many B2C client-facing websites
         where I made major contributions or led the frontend development,
@@ -15,7 +15,7 @@ export const Portfolio = () => (
       </p>
       <Grid items={B2CImages} />
     </Section>
-    <Section title="B2B Frontend Internal Apps" childStyles="font-playfair">
+    <Section title="B2B Frontend Internal Apps" contentStyles="font-playfair">
       <p>
         I have previously developed private internal applications for enterprise
         clients, providing critical business solutions. Due to IP restrictions,

@@ -43,7 +43,7 @@ export const Contact = () => (
     <Section
       title="Send me a message"
       sideContent={<Form formFields={formFields} />}
-      childStyles="text-3xl"
+      contentStyles="text-3xl"
     >
       <p>
         Whether you wish to discuss potential employment, share & collaborate on ideas or have a project for me, simply

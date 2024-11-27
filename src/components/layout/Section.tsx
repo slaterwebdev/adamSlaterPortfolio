@@ -1,17 +1,17 @@
 type SectionProps = {
   title: string;
-  titleSize?: string;
+  titleStyles?: string;
   children?: React.ReactNode;
-  childStyles?: string;
+  contentStyles?: string;
   row?: boolean;
   sideContent?: JSX.Element;
 };
 
 export const Section = ({
   title,
-  titleSize = "text-3xl sm:text-5xl",
+  titleStyles = "text-3xl sm:text-5xl",
   children,
-  childStyles = "text-base",
+  contentStyles = "text-base",
   row = false,
   sideContent,
 }: SectionProps) => (
@@ -20,12 +20,14 @@ export const Section = ({
       className={`flex flex-col gap-6 mb-12 ${row && "sm:flex-row"} sm:mb-24 w-full`}
     >
       {title && (
-        <h6 className={`text-primary ${row && "sm:w-1/2"} ${titleSize}`}>
+        <h6 className={`text-primary ${row && "sm:w-1/2"} ${titleStyles}`}>
           {title}
         </h6>
       )}
       {children && (
-        <div className={`flex flex-1 flex-col gap-6 text-black  ${childStyles}`}>
+        <div
+          className={`flex flex-1 flex-col gap-6 text-black  ${contentStyles}`}
+        >
           {children}
         </div>
       )}

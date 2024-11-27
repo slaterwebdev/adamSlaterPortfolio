@@ -13,15 +13,15 @@ export const About = () => (
   <PageTemplate content={{ title: "About" }} image={skillsHero}>
     <Section
       title="About me"
-      titleSize="text-3xl"
-      childStyles="font-playfair text-3xl font-semibold sm:text-5xl"
+      titleStyles="text-3xl"
+      contentStyles="font-playfair text-3xl font-semibold sm:text-5xl"
     >
       <p>
         I am an enthusiastic web developer based in the midlands of the UK, with
         a rich experience of over 3 years in building web applications.
       </p>
     </Section>
-    <Section title="Experience" titleSize="text-3xl">
+    <Section title="Experience" titleStyles="text-3xl">
       <ul>
         {experienceList.map(({ yearsServed, id, jobTitle, content }) => (
           <ListItem
