@@ -55,21 +55,21 @@ export const experienceList = [
     id: "Victorian Plumbing",
     jobTitle: "MID - SENIOR FRONTEND DEVELOPER",
     content:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
+      "Designed and optimised internal data management applications for one of the UK's leading e-commerce platforms, leveraging React and TypeScript within an Agile sprint system and Azure DevOps. Actively participated in Three Amigos, Devsols, and software design sessions to shape architecture and implementation!",
   },
   {
     yearsServed: "2022 - 2023",
     id: "Made by Sauce",
     jobTitle: "FRONTEND DEVELOPER",
     content:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
+      "Contributed to internal apps for B2B clients and numerous “quote and buy” SPAs for B2C clients, including Arnold Clark, DARWIN, Howdens, Triumph, Ducati, and Adrian Flux, using React, Vue.js, TypeScript,!",
   },
   {
     yearsServed: "2021 - 2022",
     id: "Big Marketing",
-    jobTitle: "JUNIOR FRONTEND DEVELOPER",
+    jobTitle: "JUNIOR REACT AND JAVASCRIPT DEVELOPER",
     content:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae similique quis qui beatae commodi aperiam quaerat, voluptatum corporis obcaecati quisquam maxime reprehenderit consectetur!",
+      "Developed a variation of event and sign-up sites for a small London-based agency specialising in the automotive industry using react and plain javascript. As well as assisting with implementing JavaScript on WordPress sites by building and customising plugins.",
   },
 ];
 

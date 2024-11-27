@@ -6,13 +6,17 @@ import { B2CImages } from "@/utils/imageMapper";
 
 export const WelcomeSection = () => (
   <>
-    <Section title="Welcome to My Portfolio!" titleSize="text-5xl">
-      <p className="font-playfair font-semibold sm:text-2xl">
+    <Section
+      title="Welcome to My Portfolio!"
+      titleSize="text-5xl"
+      childStyles="font-playfair font-semibold sm:text-2xl"
+    >
+      <p>
         I am a versatile and highly motivated Web Developer with over three
         years of hands-on experience crafting complex web applications. I am
         currently seeking a new role where I can leverage my specialisations to
-        contribute to innovative projects, assist talented teams, and
-        continue driving impactful digital solutions.
+        contribute to innovative projects, assist talented teams, and continue
+        driving impactful digital solutions.
       </p>
     </Section>
     <Section

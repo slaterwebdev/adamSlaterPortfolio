@@ -2,7 +2,7 @@ type SectionProps = {
   title: string;
   titleSize?: string;
   children?: React.ReactNode;
-  font?: string;
+  childStyles?: string;
   row?: boolean;
   sideContent?: JSX.Element;
 };
@@ -11,7 +11,7 @@ export const Section = ({
   title,
   titleSize = "text-3xl sm:text-5xl",
   children,
-  font = "text-base",
+  childStyles = "text-base",
   row = false,
   sideContent,
 }: SectionProps) => (
@@ -25,7 +25,7 @@ export const Section = ({
         </h6>
       )}
       {children && (
-        <div className={`flex flex-1 flex-col gap-6 text-black ${font}`}>
+        <div className={`flex flex-1 flex-col gap-6 text-black  ${childStyles}`}>
           {children}
         </div>
       )}
