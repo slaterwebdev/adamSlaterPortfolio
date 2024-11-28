@@ -6,8 +6,8 @@ import { useState } from "react";
 type AccordionProps = {
   items: {
     title: string;
-    list?: string[];
-    icons?: string[];
+    type: "list" | "icons";
+    content?: Array<string>;
   }[];
 };
 
@@ -20,7 +20,7 @@ export const Accordion = ({ items }: AccordionProps) => {
 
   return (
     <div className="mb-12 w-full sm:w-3/4">
-      {items.map(({ title, list, icons }, index) => (
+      {items.map(({ title, content, type }, index) => (
         <div key={index} className="shadow">
           <button
             onClick={() => toggleAccordion(index)}
@@ -34,19 +34,19 @@ export const Accordion = ({ items }: AccordionProps) => {
             />
           </button>
           <div
-            className={`transition-[max-height] duration-500 ease-in-out overflow-hidden bg-white border-b ${
-              openIndex === index ? "max-h-[500px]" : "max-h-0"
+            className={`overflow-hidden bg-white border-b ${
+              openIndex === index ? "max-h-fit" : "max-h-0"
             }`}
           >
             <div className="p-4 flex flex-wrap items-center justify-center gap-5">
-              {list ? (
+              {type === "list" ? (
                 <ul className="w-full">
-                  {list.map((item) => (
+                  {content?.map((item) => (
                     <ListItem key={item} title={item} />
                   ))}
                 </ul>
               ) : (
-                icons?.map((iconKey, i) => (
+                content?.map((iconKey, i) => (
                   <span key={i} className="text-3xl float">
                     {iconMapper[iconKey]}
                   </span>

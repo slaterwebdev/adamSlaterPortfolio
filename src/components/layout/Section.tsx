@@ -20,9 +20,9 @@ export const Section = ({
       className={`flex flex-col gap-6 mb-12 ${row && "sm:flex-row"} sm:mb-24 w-full`}
     >
       {title && (
-        <h6 className={`text-primary ${row && "sm:w-1/2"} ${titleStyles}`}>
+        <h1 className={`text-primary ${row && "sm:w-1/2"} ${titleStyles}`}>
           {title}
-        </h6>
+        </h1>
       )}
       {children && (
         <div

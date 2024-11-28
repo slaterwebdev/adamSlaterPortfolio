@@ -8,7 +8,7 @@ type ListItem = {
     value: string;
   }[];
   icon?: React.ReactNode;
-}
+};
 
 export const ListItem = ({
   title,
@@ -18,14 +18,14 @@ export const ListItem = ({
 }: ListItem) => {
   return (
     <li className={`flex justify-between gap-5 sm:gap-6 border-b py-8`}>
-      {metadata.length !== 0 ? (
+      {metadata.length > 0 ? (
         <div className="min-w-24 sm:min-w-36 sm:text-right">
           {metadata.map(({ name, value }) => (
             <div
               key={value}
               className="text-slate-500 flex items-center justify-between sm:gap-2"
             >
-              <div>
+              <div className="text-center sm:text-left">
                 <p>{value}</p>
                 <p>{name}</p>
               </div>

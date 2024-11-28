@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { generateRandomDegrees } from "@/utils/utilities";
 import { GridItem } from "@/utils/types";
-
-const BASE_CARD_CLASSES = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat h-[205px] w-[320px]`;
+import { Card } from "./Card";
 
 export const StackedCards = ({ cards = [] }: { cards: GridItem[] }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const transformValues = cards.map((_, index) =>
+    isHovered
+      ? `rotate(0deg) translateX(${index * 120}%)`
+      : `rotate(${Math.random() * 15 - 7.5}deg)`
+  );
 
   return (
     <div
@@ -15,28 +19,18 @@ export const StackedCards = ({ cards = [] }: { cards: GridItem[] }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex justify-center items-center group p-4 relative hover:overflow-scroll mb-6 h-[245px]">
-        {cards.map((card, index) => {
-          const transformValue = isHovered
-            ? `rotate(0deg) translateX(${index * 120}%)`
-            : `rotate(${generateRandomDegrees()})`;
-          return (
-            <a
-              key={card?.id}
-              href={isHovered ? card?.url : undefined}
-              aria-label={card?.id || "Portfolio Image"}
-              className={BASE_CARD_CLASSES}
-              target="_blank"
-              style={{
-                transform: transformValue,
-                backgroundImage: `url(${card.src})`,
-              }}
-            />
-          );
-        })}
+        {cards.map((card, index) => (
+          <Card
+            key={card.id}
+            {...card}
+            transform={transformValues[index]}
+            isHovered={isHovered}
+          />
+        ))}
       </div>
       {isHovered && (
         <p className="flex justify-center items-center gap-5 text-primary">
-          SCROLL {<FaArrowRight />}
+          SCROLL <FaArrowRight />
         </p>
       )}
     </div>

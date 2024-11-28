@@ -1,13 +1,13 @@
 import { Section, PageTemplate, Form } from "@/components";
 import contactHero from "@/assets/heros/contact.jpg";
-import { FormField } from "@/hooks/useForm";
+import { FormFieldType } from "@/utils/types";
 
-const formFields: FormField[] = [
+const formFields: FormFieldType[] = [
   {
     name: "name",
     type: "text",
     placeholder: "Enter name",
-    validate: function (value) {
+    validate: function (value: string) {
       return !value.trim() ? `${this.name} is required.` : "";
     },
   },
@@ -15,7 +15,7 @@ const formFields: FormField[] = [
     name: "email",
     type: "email",
     placeholder: "Enter email",
-    validate: function (value) {
+    validate: function (value: string) {
       return /^\S+@\S+\.\S+$/.test(value) ? "" : `Valid ${this.name} required.`;
     },
   },
@@ -23,7 +23,7 @@ const formFields: FormField[] = [
     name: "number",
     type: "number",
     placeholder: "Enter number",
-    validate: function (value) {
+    validate: function (value: string) {
       return !value.trim() ? `${this.name} is required.` : "";
     },
   },
@@ -32,7 +32,7 @@ const formFields: FormField[] = [
     type: "textarea",
     placeholder: "Message",
     rows: 8,
-    validate: function (value) {
+    validate: function (value: string) {
       return !value.trim() ? `${this.name} is required.` : "";
     },
   },

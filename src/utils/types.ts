@@ -14,7 +14,7 @@ export type ExperienceItem = {
   content: string;
 };
 
-export type FormField = {
+export type FormFieldType = {
   name: string;
   type: "text" | "email" | "number" | "textarea";
   placeholder: string;
@@ -22,8 +22,16 @@ export type FormField = {
   validate?: (value: string) => string;
 };
 
+export type FieldProps = FormFieldType & {
+  value: string;
+  error?: string;
+  onChange: ({
+    target: { name, value },
+  }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+};
+
 export type SkillsMapper = {
   title: string;
-  icons?: Array<string>
-  list?: Array<string>
+  type: "list" | "icons";
+  content: Array<string>
 }
