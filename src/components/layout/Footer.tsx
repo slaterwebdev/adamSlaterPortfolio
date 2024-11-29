@@ -1,46 +1,49 @@
 import { githubURL, linkedinURL } from "@/constants/constants";
 import { iconMapper } from "@/utils/iconMapper";
 import { ReactNode } from "react";
-import { useLocation } from "react-router-dom";
 
 type FooterProps = {
-  links: (pathname: string) => Array<ReactNode>;
+  navLinks: Array<ReactNode>;
 };
 
 const currentYear = new Date().getFullYear();
 
-export const Footer = ({ links }: FooterProps) => {
-  const { pathname } = useLocation();
-  return (
-    <footer className="bg-gray-800 text-white py-6 w-screen">
-      <div className="container mx-auto flex flex-col justify-between items-center sm:flex-row">
-        <div className="mb-4 sm:mb-0">
-          <p className="text-sm">
-            &copy; {currentYear} Adam Slater. All rights reserved.
-          </p>
-        </div>
+const socialLinks = [
+  {
+    href: githubURL,
+    label: "Visit Adam Slater's GitHub profile",
+    icon: iconMapper["github"],
+  },
+  {
+    href: linkedinURL,
+    label: "Visit Adam Slater's LinkedIn profile",
+    icon: iconMapper["linkedin"],
+  },
+];
 
-        <div className="mb-4 flex gap-6 sm:mb-0">{links(pathname)}</div>
+export const Footer = ({ navLinks }: FooterProps) => (
+  <footer className="bg-gray-800 text-white p-4 w-screen">
+    <div className="mx-auto max-w-screen-xl flex flex-col justify-between items-center sm:flex-row gap-4">
+      <p className="text-sm">
+        &copy; {currentYear} Adam Slater. All rights reserved.
+      </p>
 
-        <div className="flex gap-4">
+      <nav className="flex gap-6">{navLinks}</nav>
+
+      <div className="flex gap-4">
+        {socialLinks.map(({ href, label, icon }, index) => (
           <a
-            href={githubURL}
-            aria-label="Github"
+            key={index}
+            href={href}
+            aria-label={label}
             target="_blank"
-            className="hover:text-primary"
+            rel="noopener noreferrer"
+            className="hover:text-primary focus:outline focus:outline-2 focus:outline-primary"
           >
-            {iconMapper["github"]}
+            {icon}
           </a>
-          <a
-            href={linkedinURL}
-            aria-label="LinkedIn"
-            target="_blank"
-            className="hover:text-primary"
-          >
-            {iconMapper["linkedin"]}
-          </a>
-        </div>
+        ))}
       </div>
-    </footer>
-  );
-};
+    </div>
+  </footer>
+);

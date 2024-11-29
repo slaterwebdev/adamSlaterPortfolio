@@ -1,19 +1,37 @@
+import { iconMapper } from "@/utils/iconMapper";
 import { ExperienceItem, GridItem, SkillsMapper } from "@/utils/types";
-
 
 //GENERAL
 export const linkedinURL = "https://www.linkedin.com/in/adam-slater-web-dev/";
 export const githubURL = "https://github.com/slaterwebdev"
 export const portfolioRepoURL = "https://github.com/slaterwebdev/adamSlaterPortfolio";
 
-// HOME PAGE
-export const homeContent = {
-  tagLine: "HELLO, MY NAME IS",
-  title: "Adam Slater",
-  subTitle: "Web Developer",
-  phone: "07547620652",
-  email: "adamslater1996@outlook.com",
-};
+export const contactLinks: Array<{
+  href: string, 
+  label: string, 
+  icon: JSX.Element
+}> = [
+  {
+    href: "mailto:adamslater1996@outlook.com",
+    label: "adamslater1996@outlook.com",
+    icon: iconMapper["email"],
+  },
+  {
+    href: "tel:07547620652",
+    label: "07547620652",
+    icon: iconMapper["phone"],
+  },
+  {
+    href: portfolioRepoURL,
+    label: "Site Repository",
+    icon: iconMapper["github"],
+  },
+  {
+    href: "/cv.pdf",
+    label: "View My CV",
+    icon: iconMapper["cv"],
+  },
+];
 
 // ABOUT PAGE
 export const skillsMapper: SkillsMapper[] = [

@@ -1,10 +1,11 @@
-import { FormField } from "@/utils/types";
+import { FormFieldType } from "@/utils/types";
 import { useState } from "react";
 
-export const useForm = (fields: FormField[]) => {
+export const useForm = (fields: FormFieldType[]) => {
   const initialState = Object.fromEntries(fields.map(({ name }) => [name, ""]));
   const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState(initialState);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const validateField = (name: string, value: string) => {
     const field = fields.find((field) => field.name === name);
@@ -25,11 +26,22 @@ export const useForm = (fields: FormField[]) => {
     e.preventDefault();
     processFormData(formData);
     setFormData(initialState);
+    setSuccessMessage("Submission successful!");
+    setTimeout(() => {
+      setSuccessMessage(null);
+    }, 5000);
   };
 
   const isSubmitDisabled =
     Object.values(errors).some((error) => error !== "") || 
     Object.values(formData).some((value) => value.trim() === "");
 
-  return { formData, errors, handleChange, handleSubmit, isSubmitDisabled };
+  return {
+    formData,
+    errors,
+    handleChange,
+    handleSubmit,
+    isSubmitDisabled,
+    successMessage,
+  };
 };

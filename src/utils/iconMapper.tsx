@@ -2,6 +2,7 @@ import "devicon/devicon.min.css";
 import { FaLaptop, FaLinkedin, FaMailBulk, FaPhone } from "react-icons/fa";
 import { RiStackLine } from "react-icons/ri";
 import { AiOutlineApi } from "react-icons/ai";
+import { HiDocumentText } from "react-icons/hi";
 
 export const iconMapper: { [key: string]: JSX.Element } = {
   javascript: <i className="devicon-javascript-plain colored"></i>,
@@ -30,4 +31,5 @@ export const iconMapper: { [key: string]: JSX.Element } = {
   phone: <FaPhone className="text-primary" />,
   email: <FaMailBulk className="text-primary" />,
   linkedin: <FaLinkedin size={24} />,
+  cv: <HiDocumentText size={20} />,
 };

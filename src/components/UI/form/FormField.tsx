@@ -14,11 +14,9 @@ export const FormField = ({
     placeholder,
     value,
     onChange,
-    "aria-invalid": !!error,
-    "aria-describedby": `${name}-error`,
   };
   const defaultInputClasses =
-    "w-full bg-white mb-4 border-b p-2 focus:outline-none focus:ring-2 focus:ring-primary";
+    "w-full bg-white mb-4 border-b p-2";
 
   return (
     <div className="mb-4">

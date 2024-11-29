@@ -33,5 +33,5 @@ export type FieldProps = FormFieldType & {
 export type SkillsMapper = {
   title: string;
   type: "list" | "icons";
-  content: Array<string>
-}
+  content: Array<string>;
+};

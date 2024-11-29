@@ -12,11 +12,12 @@ const GridCard = ({ item }: { item: GridItem }) =>
     <a
       href={item.url}
       target="_blank"
+      rel="noopener noreferrer"
       className="bg-cover bg-center bg-no-repeat pt-[55%] relative shadow-lg rounded-sm group block"
       style={{ backgroundImage: `url(${item.src})` }}
     >
       <div className="bg-zinc-900 text-white w-full h-full top-0 absolute opacity-0 group-hover:opacity-70 flex justify-center items-center cursor-pointer">
-        <h2 className="underline">VIEW</h2>
+        <h2>VIEW</h2>
       </div>
     </a>
   ) : (
@@ -32,7 +33,7 @@ export const Grid = ({
   gap = ".5rem",
 }: GridProps) => (
   <div
-    className="flex flex-col sm:grid"
+    className="flex-col sm:grid"
     style={{ gridTemplateColumns: columns, gap }}
   >
     {items.map((item) => (

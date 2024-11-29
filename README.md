@@ -1,3 +1,9 @@
+QUICK START: 
+
+- npm install
+- npm rund dev
+
+
 PERSONAL PORTFOLIO PROJECT THEORY:
 
 While this project is small to medium in size, I designed the folder structure to show how I would approach scalability for potentially larger codebases. The abstractions demonstrate how I’d handle a growing feature set and maintain clear separation of concerns.

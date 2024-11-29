@@ -1,30 +1,37 @@
-import { useState } from "react";
 import { useForm } from "@/hooks/useForm";
 import { FormFieldType } from "@/utils/types";
 import { FormField } from "./FormField";
 
-export const Form = ({
-  formFields,
-}: {
-    formFields: FormFieldType[];
-}) => {
-  const { formData, errors, handleChange, handleSubmit, isSubmitDisabled } =
-    useForm(formFields);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+const SubmitButton = ({ isDisabled }: { isDisabled: boolean }) => (
+  <button
+    type="submit"
+    disabled={isDisabled}
+    className={`text-primary hover:text-secondary ${
+      isDisabled ? "opacity-50 cursor-not-allowed" : ""
+    }`}
+  >
+    Send Enquiry
+  </button>
+);
+
+export const Form = ({ formFields }: { formFields: FormFieldType[] }) => {
+  const {
+    formData,
+    errors,
+    handleChange,
+    handleSubmit,
+    isSubmitDisabled,
+    successMessage,
+  } = useForm(formFields);
 
   const onSubmit = (data: typeof formData) => {
     console.log("Form submitted:", data);
-    setSuccessMessage("Submission successful!");
-    setTimeout(() => {
-      setSuccessMessage(null);
-    }, 5000);
   };
 
   return (
     <form
-      className="form mx-auto mb-12 sm:mb-24 w-full sm:w-[800px] text-black"
+      className="form mx-auto mb-12 sm:mb-24 w-full max-w-[800px] text-black"
       onSubmit={(e) => {
-        setSuccessMessage(null);
         handleSubmit(e, onSubmit);
       }}
     >
@@ -42,15 +49,9 @@ export const Form = ({
         <p className="text-green-500 text-sm mb-4">{successMessage}</p>
       )}
 
-      <button
-        type="submit"
-        disabled={isSubmitDisabled}
-        className={`w-full block text-right text-primary underline hover:text-primary-dark focus:outline-none focus:ring-2 focus:ring-primary ${
-          isSubmitDisabled ? "opacity-50 cursor-not-allowed" : ""
-        }`}
-      >
-        Send Enquiry
-      </button>
+      <div className="text-right border-b">
+        <SubmitButton isDisabled={isSubmitDisabled} />
+      </div>
     </form>
   );
 };

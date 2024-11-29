@@ -19,7 +19,7 @@ export const Accordion = ({ items }: AccordionProps) => {
   };
 
   return (
-    <div className="mb-12 w-full sm:w-3/4">
+    <div className="mb-12 w-full">
       {items.map(({ title, content, type }, index) => (
         <div key={index} className="shadow">
           <button
