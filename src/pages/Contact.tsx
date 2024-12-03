@@ -46,8 +46,9 @@ export const Contact = () => (
       contentStyles="text-3xl"
     >
       <p>
-        Whether you wish to discuss potential employment, share & collaborate on ideas or have a project for me, simply
-        fill in this form and I'll get back to you soon!
+        Whether you wish to discuss potential employment, share & collaborate on
+        ideas or have a project for me, simply fill in this form and I'll get
+        back to you soon!
       </p>
     </Section>
   </PageTemplate>

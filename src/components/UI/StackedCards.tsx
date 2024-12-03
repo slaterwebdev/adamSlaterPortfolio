@@ -3,9 +3,17 @@ import { FaArrowRight } from "react-icons/fa";
 import { generateRandomDegrees } from "@/utils/utilities";
 import { GridItem } from "@/utils/types";
 
-const BASE_CARD_CLASSES = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat h-[205px] w-[320px]`;
+const BASE_CARD_CLASSES = `absolute bg-white rounded-lg shadow-lg transform transition-all duration-500 ease-in-out bg-cover bg-center bg-no-repeat inset-0`;
 
-export const StackedCards = ({ cards = [] }: { cards: GridItem[] }) => {
+export const StackedCards = ({
+  cards = [],
+  height = "200px",
+  width = "320px",
+}: {
+  cards: GridItem[];
+  height?: string;
+  width?: string;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
@@ -16,14 +24,20 @@ export const StackedCards = ({ cards = [] }: { cards: GridItem[] }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex justify-center items-center group p-4 relative hover:overflow-scroll mb-6 h-[245px]">
+      <div
+        className="mx-auto group p-4 relative hover:overflow-scroll mb-6 relative"
+        style={{
+          height: height,
+          width: width,
+        }}
+      >
         {cards.map((card, index) => {
           if (!card || !card.src) return null;
 
           const transformValue = isHovered
             ? `rotate(0deg) translateX(${index * 120}%)`
             : `rotate(${generateRandomDegrees()})`;
-          
+
           return (
             <a
               key={card?.id}
