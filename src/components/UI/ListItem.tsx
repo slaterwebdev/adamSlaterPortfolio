@@ -3,7 +3,7 @@ import { FaChevronCircleRight } from "react-icons/fa";
 type ListItem = {
   title: string;
   description?: string;
-  metadata?: {
+  data?: {
     name: string;
     value: string;
   }[];
@@ -13,14 +13,14 @@ type ListItem = {
 export const ListItem = ({
   title,
   description,
-  metadata = [],
+  data = [],
   icon = <FaChevronCircleRight />,
 }: ListItem) => {
   return (
-    <li className={`flex justify-between gap-5 sm:gap-6 border-b py-8`}>
-      {metadata.length > 0 ? (
+    <li className="flex justify-between gap-5 sm:gap-6 border-b py-8">
+      {data.length > 0 && (
         <div className="min-w-24 sm:min-w-36 sm:text-right">
-          {metadata.map(({ name, value }) => (
+          {data.map(({ name, value }) => (
             <div
               key={value}
               className="text-slate-500 flex items-center justify-between sm:gap-2"
@@ -29,13 +29,12 @@ export const ListItem = ({
                 <p>{value}</p>
                 <p>{name}</p>
               </div>
-              <span className="min-w-4">{icon}</span>
+              <span className="min-w-4 text-black">{icon}</span>
             </div>
           ))}
         </div>
-      ) : (
-        <div className="min-w-4 flex items-center">{icon}</div>
       )}
+      
       <div className="flex flex-col gap-5">
         <h2 className="text-primary">{title}</h2>
         {description && <p>{description}</p>}

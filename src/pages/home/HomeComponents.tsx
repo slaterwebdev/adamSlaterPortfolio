@@ -21,7 +21,6 @@ export const WelcomeSection = () => (
     </Section>
     <Section
       title="I help to transform ideas into efficent user centred digital products"
-      titleStyles="text-3xl"
       row
     >
       <p>
@@ -41,7 +40,7 @@ export const WelcomeSection = () => (
 );
 
 export const ServicesSection = () => (
-  <Section title="What I bring to the table" titleStyles="text-3xl">
+  <Section title="What I bring to the table">
     <Grid items={serviceOptions} gap="2rem" />
   </Section>
 );

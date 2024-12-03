@@ -7,10 +7,8 @@ export const useForm = (fields: FormFieldType[]) => {
   const [errors, setErrors] = useState(initialState);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  const validateField = (name: string, value: string) => {
-    const field = fields.find((field) => field.name === name);
-    return field?.validate ? field.validate(value) : "";
-  };
+  const validateField = (name: string, value: string) =>
+    fields.find((field) => field.name === name)?.validate?.(value) || "";
 
   const handleChange = ({
     target: { name, value },
@@ -33,7 +31,7 @@ export const useForm = (fields: FormFieldType[]) => {
   };
 
   const isSubmitDisabled =
-    Object.values(errors).some((error) => error !== "") || 
+    Object.values(errors).some((error) => error !== "") ||
     Object.values(formData).some((value) => value.trim() === "");
 
   return {

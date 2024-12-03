@@ -28,7 +28,7 @@ export const About = () => (
             key={id}
             title={jobTitle}
             description={content}
-            metadata={[{ value: yearsServed, name: id }]}
+            data={[{ value: yearsServed, name: id }]}
           />
         ))}
       </ul>

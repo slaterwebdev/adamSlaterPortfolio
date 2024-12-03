@@ -33,7 +33,7 @@ export const Grid = ({
   gap = ".5rem",
 }: GridProps) => (
   <div
-    className="flex-col sm:grid"
+    className="flex flex-col sm:grid"
     style={{ gridTemplateColumns: columns, gap }}
   >
     {items.map((item) => (
