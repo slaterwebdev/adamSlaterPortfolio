@@ -1,4 +1,4 @@
-import { iconMapper } from "@/utils/iconMapper";
+import { getIcon } from "@/utils/iconMapper";
 import { ExperienceItem, GridItem, SkillsMapper } from "@/utils/types";
 
 //GENERAL
@@ -16,22 +16,22 @@ export const contactLinks: Array<{
   {
     href: "mailto:adamslater1996@outlook.com",
     label: "adamslater1996@outlook.com",
-    icon: iconMapper["email"],
+    icon: getIcon("email"),
   },
   {
     href: "tel:07547620652",
     label: "07547620652",
-    icon: iconMapper["phone"],
+    icon: getIcon("phone"),
   },
   {
     href: portfolioRepoURL,
     label: "Site Repository",
-    icon: iconMapper["github"],
+    icon: getIcon("github"),
   },
   {
     href: "/cv.pdf",
     label: "View My CV",
-    icon: iconMapper["cv"],
+    icon: getIcon("cv"),
   },
 ];
 

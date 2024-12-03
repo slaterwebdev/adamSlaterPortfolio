@@ -2,9 +2,9 @@ import "devicon/devicon.min.css";
 import { FaLaptop, FaLinkedin, FaMailBulk, FaPhone } from "react-icons/fa";
 import { RiStackLine } from "react-icons/ri";
 import { AiOutlineApi } from "react-icons/ai";
-import { HiDocumentText } from "react-icons/hi";
+import { HiDocumentText, HiOutlineQuestionMarkCircle } from "react-icons/hi";
 
-export const iconMapper: { [key: string]: JSX.Element } = {
+const iconMapper: { [key: string]: JSX.Element } = {
   javascript: <i className="devicon-javascript-plain colored"></i>,
   html: <i className="devicon-html5-plain-wordmark colored"></i>,
   css: <i className="devicon-css3-plain-wordmark colored"></i>,
@@ -32,4 +32,7 @@ export const iconMapper: { [key: string]: JSX.Element } = {
   email: <FaMailBulk className="text-primary" />,
   linkedin: <FaLinkedin size={24} />,
   cv: <HiDocumentText size={20} />,
+  default: <HiOutlineQuestionMarkCircle size={24} className="text-gray-500" />,
 };
+
+export const getIcon = (key: string): JSX.Element => iconMapper[key] || iconMapper.default;

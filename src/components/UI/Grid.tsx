@@ -1,5 +1,5 @@
 import { GridItem } from "@/utils/types";
-import { iconMapper } from "@/utils/iconMapper";
+import { getIcon } from "@/utils/iconMapper";
 
 type GridProps = {
   items: GridItem[];
@@ -22,7 +22,7 @@ const GridCard = ({ item }: { item: GridItem }) =>
     </a>
   ) : (
     <div className="flex justify-between gap-5 items-center sm:mb-0 sm:flex-col">
-      {item.id && <i className="hover:text-primary">{iconMapper[item.id]}</i>}
+      {item.id && <i className="hover:text-primary">{getIcon(item.id)}</i>}
       {item.content && <p>{item.content}</p>}
     </div>
   );

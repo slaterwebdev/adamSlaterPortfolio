@@ -1,4 +1,4 @@
-import { iconMapper } from "@/utils/iconMapper";
+import { getIcon } from "@/utils/iconMapper";
 import { FaChevronLeft } from "react-icons/fa";
 import { ListItem } from "./ListItem";
 import { useState } from "react";
@@ -48,7 +48,7 @@ export const Accordion = ({ items }: AccordionProps) => {
               ) : (
                 content?.map((iconKey, i) => (
                   <span key={i} className="text-3xl float">
-                    {iconMapper[iconKey]}
+                    {getIcon(iconKey)}
                   </span>
                 ))
               )}

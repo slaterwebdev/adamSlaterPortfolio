@@ -1,19 +1,19 @@
 import { PageTemplate, Section, Grid } from "@/components";
 import portfolioHero from "@/assets/heros/portfolio.jpg";
-import { B2BImages, B2CImages, employers } from "@/utils/imageMapper";
+import { portfolioImages } from "@/utils/imageMapper";
 
 export const Portfolio = () => (
   <PageTemplate content={{ title: "Portfolio" }} image={portfolioHero}>
     <Section title="Key B2C Frontend builds" contentStyles="font-playfair">
       <p>
-        A few handpicked examples of many B2C client-facing websites
-        where I made major contributions or led the frontend development,
-        delivering high-quality, scalable solutions. Each project involved
-        crafting responsive, user-focused interfaces, working with large data
-        sets and user data extraction, and collaborating with teams to ensure
-        seamless functionality and exceptional user experiences.
+        A few handpicked examples of many B2C client-facing websites where I
+        made major contributions or led the frontend development, delivering
+        high-quality, scalable solutions. Each project involved crafting
+        responsive, user-focused interfaces, working with large data sets and
+        user data extraction, and collaborating with teams to ensure seamless
+        functionality and exceptional user experiences.
       </p>
-      <Grid items={B2CImages} />
+      <Grid items={portfolioImages.B2C} />
     </Section>
     <Section title="B2B Frontend Internal Apps" contentStyles="font-playfair">
       <p>
@@ -31,10 +31,10 @@ export const Portfolio = () => (
         in the Help Centre highlight areas where these applications effectively
         resolved issues.
       </p>
-      <Grid items={B2BImages} columns="1fr 1fr" />
+      <Grid items={portfolioImages.B2B} columns="1fr 1fr" />
     </Section>
     <Section title="Previous Employers">
-      <Grid items={employers} columns="1fr 1fr" />
+      <Grid items={portfolioImages.employers} columns="1fr 1fr" />
     </Section>
   </PageTemplate>
 );

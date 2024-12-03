@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { serviceOptions } from "@/constants/constants";
 import { scrollToTop } from "@/utils/utilities";
 import { Section, Grid, StackedCards } from "@/components";
-import { B2CImages } from "@/utils/imageMapper";
+import { portfolioImages } from "@/utils/imageMapper";
 
 export const WelcomeSection = () => (
   <>
@@ -48,7 +48,7 @@ export const ServicesSection = () => (
 export const PortfolioSection = () => (
   <Section
     title="Check out some of my previous work"
-    sideContent={<StackedCards cards={B2CImages} />}
+    sideContent={<StackedCards cards={portfolioImages.B2C} />}
   >
     <p>
       I have worked with various employers to create stunning and functional
@@ -57,7 +57,6 @@ export const PortfolioSection = () => (
     </p>
     <div className="text-center sm:text-left">
       <NavLink
-        aria-label="View more projects in portfolio"
         className="text-primary underline"
         to={"/portfolio"}
         onClick={() => scrollToTop()}

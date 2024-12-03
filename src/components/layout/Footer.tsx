@@ -1,5 +1,5 @@
 import { githubURL, linkedinURL } from "@/constants/constants";
-import { iconMapper } from "@/utils/iconMapper";
+import { getIcon } from "@/utils/iconMapper";
 import { ReactNode } from "react";
 
 type FooterProps = {
@@ -11,13 +11,11 @@ const currentYear = new Date().getFullYear();
 const socialLinks = [
   {
     href: githubURL,
-    label: "Visit Adam Slater's GitHub profile",
-    icon: iconMapper["github"],
+    icon: getIcon("github"),
   },
   {
     href: linkedinURL,
-    label: "Visit Adam Slater's LinkedIn profile",
-    icon: iconMapper["linkedin"],
+    icon: getIcon("linkedin"),
   },
 ];
 
@@ -31,11 +29,10 @@ export const Footer = ({ navLinks }: FooterProps) => (
       <nav className="flex gap-6">{navLinks}</nav>
 
       <div className="flex gap-4">
-        {socialLinks.map(({ href, label, icon }, index) => (
+        {socialLinks.map(({ href, icon }, index) => (
           <a
             key={index}
             href={href}
-            aria-label={label}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary focus:outline focus:outline-2 focus:outline-primary"

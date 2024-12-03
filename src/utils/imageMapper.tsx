@@ -11,7 +11,7 @@ import {
 } from "@/assets/porfolio";
 import { GridItem } from "@/utils/types";
 
-export const portfolioImages: GridItem[] = [
+const portfolioImagesData: GridItem[] = [
   {
     id: "arnoldClark",
     url: "https://car.arnoldclarkinsurance.com/assumptions",
@@ -64,16 +64,12 @@ export const portfolioImages: GridItem[] = [
     id: "darwinQb",
     url: "https://quote.darwin-insurance.com/quote/create",
     src: darwinQuote,
-    category: "B2C"
+    category: "B2C",
   },
 ];
 
-export const B2CImages = portfolioImages.filter(
-  (item) => item.category === "B2C"
-);
-export const B2BImages = portfolioImages.filter(
-  (item) => item.category === "B2B"
-);
-export const employers = portfolioImages.filter(
-  (item) => item.employer
-);
+export const portfolioImages = {
+  B2C: portfolioImagesData.filter((item) => item.category === "B2C"),
+  B2B: portfolioImagesData.filter((item) => item.category === "B2B"),
+  employers: portfolioImagesData.filter((item) => item.employer),
+};

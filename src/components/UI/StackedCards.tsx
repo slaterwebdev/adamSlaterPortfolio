@@ -7,23 +7,27 @@ const BASE_CARD_CLASSES = `absolute bg-white rounded-lg shadow-lg transform tran
 
 export const StackedCards = ({ cards = [] }: { cards: GridItem[] }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
 
   return (
     <div
       className="w-full max-w-sm mb-12 sm:mb-24"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="flex justify-center items-center group p-4 relative hover:overflow-scroll mb-6 h-[245px]">
         {cards.map((card, index) => {
+          if (!card || !card.src) return null;
+
           const transformValue = isHovered
             ? `rotate(0deg) translateX(${index * 120}%)`
             : `rotate(${generateRandomDegrees()})`;
+          
           return (
             <a
               key={card?.id}
               href={isHovered ? card?.url : undefined}
-              aria-label={card?.id || "Portfolio Image"}
               className={BASE_CARD_CLASSES}
               target="_blank"
               style={{
