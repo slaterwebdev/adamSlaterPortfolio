@@ -41,7 +41,7 @@ export const WelcomeSection = () => (
 
 export const ServicesSection = () => (
   <Section title="What I bring to the table">
-    <Grid items={serviceOptions} gap="2rem" />
+    <Grid items={serviceOptions} gap="2rem"  />
   </Section>
 );
 
