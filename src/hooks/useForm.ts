@@ -9,6 +9,7 @@ export const useForm = (fields: FormFieldType[]) => {
 
   const validateField = (name: string, value: string) =>
     fields.find((field) => field.name === name)?.validate?.(value) || "";
+  
 
   const handleChange = ({
     target: { name, value },

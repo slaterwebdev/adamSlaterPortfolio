@@ -8,7 +8,6 @@ export const WelcomeSection = () => (
   <>
     <Section
       title="Welcome to My Portfolio!"
-      titleStyles="text-5xl"
       contentStyles="font-playfair font-semibold sm:text-2xl"
     >
       <p>
@@ -22,6 +21,7 @@ export const WelcomeSection = () => (
     <Section
       title="I help to transform ideas into efficent user centred digital products"
       row
+      titleStyles="text-3xl"
     >
       <p>
         Whether collaborating on cutting-edge solutions or aiding & leading
@@ -40,8 +40,8 @@ export const WelcomeSection = () => (
 );
 
 export const ServicesSection = () => (
-  <Section title="What I bring to the table">
-    <Grid items={serviceOptions} gap="2rem"  />
+  <Section title="What I bring to the table" titleStyles="text-3xl">
+    <Grid items={serviceOptions} gap="2rem" />
   </Section>
 );
 

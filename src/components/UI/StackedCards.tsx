@@ -47,7 +47,7 @@ export const StackedCards = ({
               target="_blank"
               style={{
                 transform: transformValue,
-                backgroundImage: `url(${card.src || fallBackImage})`,
+                backgroundImage: `url(${card.src.length ? card.src : fallBackImage})`,
               }}
             />
           );

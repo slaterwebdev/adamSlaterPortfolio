@@ -8,7 +8,7 @@ const formFields: FormFieldType[] = [
     type: "text",
     placeholder: "Enter name",
     validate: function (value: string) {
-      return !value.trim() ? `${this.name} is required.` : "";
+      return !value.trim() ? `A ${this.name} is required.` : "";
     },
   },
   {
@@ -24,7 +24,7 @@ const formFields: FormFieldType[] = [
     type: "number",
     placeholder: "Enter number",
     validate: function (value: string) {
-      return !value.trim() ? `${this.name} is required.` : "";
+      return !value.trim() ? `A ${this.name} is required.` : "";
     },
   },
   {
@@ -33,7 +33,7 @@ const formFields: FormFieldType[] = [
     placeholder: "Message",
     rows: 8,
     validate: function (value: string) {
-      return !value.trim() ? `${this.name} is required.` : "";
+      return !value.trim() ? `A ${this.name} is required.` : "";
     },
   },
 ];
